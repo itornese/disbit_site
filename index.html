@@ -218,7 +218,7 @@ dialog.pdlg::backdrop{background:#0e0c17b3;backdrop-filter:blur(3px)}
 .pdlg .n{font-size:12px;font-weight:700;color:var(--orange);letter-spacing:.12em}
 .pdlg h3{font-size:clamp(22px,3vw,28px);margin:6px 48px 18px 0}
 .pdlg figure{margin:0 0 22px}
-.pdlg figure img{width:100%;max-width:420px;height:auto;border-radius:12px;border:1px solid var(--line);display:block;margin:0 auto}
+.pdlg figure img{width:100%;max-width:500px;height:auto;border-radius:12px;border:1px solid var(--line);display:block;margin:0 auto}
 .pdlg .part{margin-top:14px}
 .pdlg .part b{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:4px}
 .pdlg .part p{color:var(--ink-2);font-size:16px}
@@ -357,6 +357,10 @@ main p b{font-weight:700;color:var(--ink)}
 .phase{grid-row:span 4}
 .phase h3.word{font-size:clamp(23px,2.2vw,29px);font-weight:800;margin:0 0 6px;letter-spacing:-.02em;line-height:1.1}
 .phase h3.word .ini{color:var(--orange);font-size:1.55em;line-height:.9;letter-spacing:-.03em}
+/* anteprima a fumetti nelle card INNOVAGENDA */
+.principle{overflow:hidden}
+.principle .pthumb{display:block;width:calc(100% + 36px);max-width:none;margin:-18px -18px 14px;aspect-ratio:640/278;height:auto;object-fit:cover;border-bottom:1px solid var(--line);transition:transform .3s}
+.principle:hover .pthumb,.principle:focus-visible .pthumb{transform:scale(1.03)}
 /* CONTATTI */
 .contact{background:var(--hero-bg);color:var(--hero-ink)}
 .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
@@ -610,18 +614,18 @@ footer a{color:var(--hero-muted)}
       <p>12 principi per la gestione strategica dell'innovazione, ispirati alla serie ISO 56000. Non una checklist, ma la lente manageriale che il metodo DISBIT applica ai processi.</p>
     </div>
     <div class="principles">
-        <button class="principle" type="button" data-i="0"><span class="n">#01</span><h3>Realizzazione del valore</h3><p>Il valore non nasce dall'idea, ma dalla sua realizzazione concreta.</p><span class="more">Approfondisci →</span></button>
-        <button class="principle" type="button" data-i="1"><span class="n">#02</span><h3>Gestione dell'incertezza</h3><p>L'incertezza non va eliminata, ma governata: è il terreno su cui nasce l'innovazione significativa.</p><span class="more">Approfondisci →</span></button>
-        <button class="principle" type="button" data-i="2"><span class="n">#03</span><h3>Orientamento strategico</h3><p>Senza orientamento strategico, l'innovazione diventa dispersione invece che leva competitiva.</p><span class="more">Approfondisci →</span></button>
-        <button class="principle" type="button" data-i="3"><span class="n">#04</span><h3>Approccio sistemico</h3><p>L'innovazione diventa una capacità reale solo quando smette di essere episodica.</p><span class="more">Approfondisci →</span></button>
-        <button class="principle extra" type="button" data-i="4"><span class="n">#05</span><h3>Leadership orientata al futuro</h3><p>La leadership non protegge solo la stabilità: costruisce la direzione del cambiamento.</p><span class="more">Approfondisci →</span></button>
-        <button class="principle extra" type="button" data-i="5"><span class="n">#06</span><h3>Cultura dell'innovazione</h3><p>La cultura decide cosa è consentito fare quando si innova.</p><span class="more">Approfondisci →</span></button>
-        <button class="principle extra" type="button" data-i="6"><span class="n">#07</span><h3>Sfruttamento delle intuizioni</h3><p>Gli insight trasformano l'informazione in scelte: senza, si innova a vista.</p><span class="more">Approfondisci →</span></button>
-        <button class="principle extra" type="button" data-i="7"><span class="n">#08</span><h3>Adattabilità</h3><p>L'adattabilità è una capacità progettata, non una reazione improvvisata.</p><span class="more">Approfondisci →</span></button>
-        <button class="principle extra" type="button" data-i="8"><span class="n">#09</span><h3>Innovazione aperta</h3><p>L'ecosistema accelera ciò che l'organizzazione, da sola, tende a rallentare.</p><span class="more">Approfondisci →</span></button>
-        <button class="principle extra" type="button" data-i="9"><span class="n">#10</span><h3>Gestione della conoscenza</h3><p>La conoscenza diventa vantaggio solo quando è memoria collettiva, non sapere individuale.</p><span class="more">Approfondisci →</span></button>
-        <button class="principle extra" type="button" data-i="10"><span class="n">#11</span><h3>Valutazione delle prestazioni</h3><p>Misurare bene non è controllo: è governo dell'apprendimento e della rotta.</p><span class="more">Approfondisci →</span></button>
-        <button class="principle extra" type="button" data-i="11"><span class="n">#12</span><h3>Integrità e responsabilità sociale</h3><p>L'integrità non è un vincolo a posteriori: è progettazione responsabile fin dall'inizio.</p><span class="more">Approfondisci →</span></button>
+        <button class="principle" type="button" data-i="0"><img class="pthumb" src="assets/innovagenda/thumb/01.jpg" alt="" width="640" height="278" loading="lazy"><span class="n">#01</span><h3>Realizzazione del valore</h3><p>Il valore non nasce dall'idea, ma dalla sua realizzazione concreta.</p><span class="more">Approfondisci →</span></button>
+        <button class="principle" type="button" data-i="1"><img class="pthumb" src="assets/innovagenda/thumb/02.jpg" alt="" width="640" height="278" loading="lazy"><span class="n">#02</span><h3>Gestione dell'incertezza</h3><p>L'incertezza non va eliminata, ma governata: è il terreno su cui nasce l'innovazione significativa.</p><span class="more">Approfondisci →</span></button>
+        <button class="principle" type="button" data-i="2"><img class="pthumb" src="assets/innovagenda/thumb/03.jpg" alt="" width="640" height="278" loading="lazy"><span class="n">#03</span><h3>Orientamento strategico</h3><p>Senza orientamento strategico, l'innovazione diventa dispersione invece che leva competitiva.</p><span class="more">Approfondisci →</span></button>
+        <button class="principle" type="button" data-i="3"><img class="pthumb" src="assets/innovagenda/thumb/04.jpg" alt="" width="640" height="278" loading="lazy"><span class="n">#04</span><h3>Approccio sistemico</h3><p>L'innovazione diventa una capacità reale solo quando smette di essere episodica.</p><span class="more">Approfondisci →</span></button>
+        <button class="principle extra" type="button" data-i="4"><img class="pthumb" src="assets/innovagenda/thumb/05.jpg" alt="" width="640" height="278" loading="lazy"><span class="n">#05</span><h3>Leadership orientata al futuro</h3><p>La leadership non protegge solo la stabilità: costruisce la direzione del cambiamento.</p><span class="more">Approfondisci →</span></button>
+        <button class="principle extra" type="button" data-i="5"><img class="pthumb" src="assets/innovagenda/thumb/06.jpg" alt="" width="640" height="278" loading="lazy"><span class="n">#06</span><h3>Cultura dell'innovazione</h3><p>La cultura decide cosa è consentito fare quando si innova.</p><span class="more">Approfondisci →</span></button>
+        <button class="principle extra" type="button" data-i="6"><img class="pthumb" src="assets/innovagenda/thumb/07.jpg" alt="" width="640" height="278" loading="lazy"><span class="n">#07</span><h3>Sfruttamento delle intuizioni</h3><p>Gli insight trasformano l'informazione in scelte: senza, si innova a vista.</p><span class="more">Approfondisci →</span></button>
+        <button class="principle extra" type="button" data-i="7"><img class="pthumb" src="assets/innovagenda/thumb/08.jpg" alt="" width="640" height="278" loading="lazy"><span class="n">#08</span><h3>Adattabilità</h3><p>L'adattabilità è una capacità progettata, non una reazione improvvisata.</p><span class="more">Approfondisci →</span></button>
+        <button class="principle extra" type="button" data-i="8"><img class="pthumb" src="assets/innovagenda/thumb/09.jpg" alt="" width="640" height="278" loading="lazy"><span class="n">#09</span><h3>Innovazione aperta</h3><p>L'ecosistema accelera ciò che l'organizzazione, da sola, tende a rallentare.</p><span class="more">Approfondisci →</span></button>
+        <button class="principle extra" type="button" data-i="9"><img class="pthumb" src="assets/innovagenda/thumb/10.jpg" alt="" width="640" height="278" loading="lazy"><span class="n">#10</span><h3>Gestione della conoscenza</h3><p>La conoscenza diventa vantaggio solo quando è memoria collettiva, non sapere individuale.</p><span class="more">Approfondisci →</span></button>
+        <button class="principle extra" type="button" data-i="10"><img class="pthumb" src="assets/innovagenda/thumb/11.jpg" alt="" width="640" height="278" loading="lazy"><span class="n">#11</span><h3>Valutazione delle prestazioni</h3><p>Misurare bene non è controllo: è governo dell'apprendimento e della rotta.</p><span class="more">Approfondisci →</span></button>
+        <button class="principle extra" type="button" data-i="11"><img class="pthumb" src="assets/innovagenda/thumb/12.jpg" alt="" width="640" height="278" loading="lazy"><span class="n">#12</span><h3>Integrità e responsabilità sociale</h3><p>L'integrità non è un vincolo a posteriori: è progettazione responsabile fin dall'inizio.</p><span class="more">Approfondisci →</span></button>
     </div>
     <a class="btn btn-outline" href="/innovagenda/">Vedi tutti i 12 principi →</a>
     <p class="closing">L'innovazione non fallisce per mancanza di idee, ma per assenza di governo.</p>
@@ -634,7 +638,7 @@ footer a{color:var(--hero-muted)}
     <button class="close" type="button" aria-label="Chiudi" data-close>×</button>
     <span class="n" id="pdlg-n"></span>
     <h3 id="pdlg-title"></h3>
-    <figure id="pdlg-fig" hidden><img id="pdlg-img" alt="" width="840" height="1260" loading="lazy"></figure>
+    <figure id="pdlg-fig" hidden><img id="pdlg-img" alt="" width="840" height="1260"></figure>
     <div class="part"><b>Il principio</b><p id="pdlg-p"></p></div>
     <div class="part"><b>L'errore più frequente</b><p id="pdlg-e"></p></div>
     <div class="part"><b>Come si riconosce</b><p id="pdlg-s"></p></div>
