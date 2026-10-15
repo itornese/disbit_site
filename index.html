@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DISBIT | Management, Governance e Process Innovation</title>
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="canonical" href="https://disbit.it/">
+<link rel="alternate" hreflang="it" href="https://disbit.it/">
+<link rel="alternate" hreflang="en" href="https://disbit.it/en/">
+<link rel="alternate" hreflang="x-default" href="https://disbit.it/">
+<meta name="theme-color" content="#0e0c17">
+<meta name="description" content="Affianco aziende e fornitori di servizi nella governance di programmi complessi, nella reingegnerizzazione e nella digitalizzazione dei processi. Metodo, dati e tecnologia per risultati misurabili.">
+<meta property="og:title" content="DISBIT · Processi più efficienti. Trasformazioni sotto controllo.">
+<meta property="og:description" content="Affianco aziende e fornitori di servizi nella governance di programmi complessi, nella reingegnerizzazione e nella digitalizzazione dei processi. Metodo, dati e tecnologia per risultati misurabili.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://disbit.it/">
+<meta property="og:site_name" content="DISBIT">
+<meta property="og:locale" content="it_IT">
+<meta property="og:image" content="https://disbit.it/assets/og-disbit.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DISBIT · Processi più efficienti. Trasformazioni sotto controllo.">
+<meta name="twitter:description" content="Affianco aziende e fornitori di servizi nella governance di programmi complessi, nella reingegnerizzazione e nella digitalizzazione dei processi. Metodo, dati e tecnologia per risultati misurabili.">
+<meta name="twitter:image" content="https://disbit.it/assets/og-disbit.png">
+<link rel="preload" href="assets/fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Inter";src:url("assets/fonts/inter-latin-var.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+:root{
+  --ink:#1d1830; --ink-2:#3b3550; --muted:#6b6680;
+  --paper:#faf8f4; --card:#ffffff; --line:#e6e1d8;
+  --teal:#137a66; --teal-soft:#e3f1ed;
+  --orange:#cf6c17; --orange-soft:#fbeadb;
+  --hero-bg:#1d1830; --hero-ink:#f5f2ec; --hero-muted:#b3adc4;
+  --orange-ink:#a8520b; --btn:#b85c10; --btn-ink:#ffffff;
+  --radius:14px; --max:1120px;
+  --sans:"Inter","Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#f1eef7; --ink-2:#cfcade; --muted:#9a94ad;
+    --paper:#14111f; --card:#1d1930; --line:#2e2944;
+    --teal:#4cc3a6; --teal-soft:#16302b;
+    --orange:#f0913f; --orange-soft:#33231a;
+    --hero-bg:#0e0c17;
+    --orange-ink:#f0913f; --btn:#f0913f; --btn-ink:#1d1830;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#f1eef7; --ink-2:#cfcade; --muted:#9a94ad;
+  --paper:#14111f; --card:#1d1930; --line:#2e2944;
+  --teal:#4cc3a6; --teal-soft:#16302b;
+  --orange:#f0913f; --orange-soft:#33231a;
+  --hero-bg:#0e0c17;
+  --orange-ink:#f0913f; --btn:#f0913f; --btn-ink:#1d1830;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{overflow-x:clip;background:var(--paper);color:var(--ink);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{line-height:1.15;letter-spacing:-.02em}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+section{padding:96px 0;scroll-margin-top:64px}
+.eyebrow{font-size:17px;font-weight:700;line-height:1.2;letter-spacing:.2em;text-transform:uppercase;color:var(--teal);margin-bottom:18px}
+@media (max-width:600px){.eyebrow{font-size:14px;letter-spacing:.16em}}
+.section-title{font-size:clamp(30px,4vw,44px);font-weight:700;max-width:24ch}
+.lead{font-size:19px;color:var(--ink-2);max-width:62ch;margin-top:20px}
+.alt{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:99px;font:600 15px/1.2 var(--sans);text-decoration:none;border:0;cursor:pointer;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--btn);color:var(--btn-ink)}
+.btn-ghost{border:1px solid #ffffff40;color:var(--hero-ink);background:transparent}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--hero-bg) 92%,transparent);backdrop-filter:blur(10px);color:var(--hero-ink)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.brand img{height:19px;width:auto}
+.brand span{font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--hero-muted);padding-left:14px;border-left:1px solid #ffffff2e}
+nav ul{display:flex;gap:26px;list-style:none;align-items:center}
+nav ul a{text-decoration:none;font-size:14px;color:var(--hero-muted)}
+nav ul a:hover{color:var(--hero-ink)}
+nav ul a.lang{font-size:12.5px;font-weight:700;letter-spacing:.08em;color:var(--hero-ink);border:1px solid #ffffff38;border-radius:8px;padding:5px 8px}
+nav ul a.lang:hover{border-color:var(--hero-ink)}
+nav.open ul a.lang{border:0;border-bottom:1px solid #ffffff10;border-radius:0;padding:14px 4px;font-size:15px}
+@media (max-width:860px){nav ul li.lang-li{display:list-item!important}nav:not(.open) ul{gap:12px}}
+.nav-cta{background:var(--btn);color:var(--btn-ink)!important;padding:8px 16px;border-radius:99px}
+@media (max-width:860px){nav ul li:not(:last-child){display:none}}
+@media (max-width:420px){.brand span{display:none}.nav-cta{padding:7px 12px;font-size:13px!important}}
+footer .foot-brand img{height:14px;width:auto;opacity:.85}
+footer .wrap{align-items:center}
+
+/* HERO */
+.hero{background:var(--hero-bg);color:var(--hero-ink);padding:88px 0 96px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero .eyebrow{color:var(--hero-muted)}
+.hero h1{font-size:clamp(38px,4.7vw,60px);font-weight:800;letter-spacing:-.03em;line-height:1.05}
+.hero h1 em{font-style:normal;color:var(--orange);display:block}
+.hero p.intro{color:var(--hero-muted);font-size:19px;max-width:54ch;margin-top:26px}
+.hero p.intro b{color:var(--hero-ink);font-weight:600}
+.hero p.target{margin-top:22px;padding-left:16px;border-left:3px solid var(--orange);color:var(--hero-ink);font-size:16.5px;font-weight:500;max-width:54ch}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin:36px 0 28px}
+.who{display:flex;align-items:center;gap:12px;color:var(--hero-muted);font-size:14px}
+.who b{color:var(--hero-ink);font-weight:600}
+.who i{flex:none;width:7px;height:7px;border-radius:50%;background:var(--teal);display:inline-block}
+/* illustrazione: dal groviglio al flusso */
+.hero{position:relative}
+.hero-art{position:relative;align-self:stretch;min-height:480px}
+.hero-art canvas{position:absolute;top:0;left:-48px;height:100%;width:calc(100% + 48px + max(24px, (100vw - 1120px) / 2 + 24px));display:block;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 14%,#000 86%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 14%,#000 86%,transparent 100%)}
+@media (max-width:960px){
+  .hero{padding:56px 0 0}
+  .hero .wrap{grid-template-columns:1fr;gap:16px}
+  .hero-art{min-height:260px;margin:0 -24px}
+  .hero-art canvas{left:0;width:100%}
+}
+
+/* SEGNALI */
+.signals{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.signal{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px 24px 24px 56px;font-size:16.5px;color:var(--ink-2);position:relative}
+.signal::before{content:"";position:absolute;left:22px;top:28px;width:18px;height:18px;border-radius:50%;border:2px solid var(--orange)}
+.signal::after{content:"";position:absolute;left:29px;top:35px;width:4px;height:4px;border-radius:50%;background:var(--orange)}
+.signals-foot{margin-top:32px;font-size:19px;font-weight:600;max-width:60ch}
+.signals-foot span{color:var(--teal)}
+@media (max-width:900px){.signals{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.signals{grid-template-columns:1fr}}
+
+/* PERCORSO */
+.path{display:grid;grid-template-columns:repeat(4,1fr) .85fr;column-gap:14px;row-gap:14px;margin-top:56px}
+.it-phase{padding:28px 20px}
+.it-phase .letter{letter-spacing:-.02em}
+.phase{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;display:grid;grid-row:span 5;grid-template-rows:subgrid;row-gap:0;align-content:start}
+.phase.first{background:var(--hero-bg);color:var(--hero-ink);border-color:transparent}
+.phase .letter{font-weight:800;font-size:56px;line-height:1;color:var(--orange);letter-spacing:-.04em}
+.phase h3 em{font-style:normal;color:var(--orange-ink)}
+.phase .tag{display:inline-block;align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--orange);color:#fff;padding:5px 10px;border-radius:99px;margin-top:16px}
+.phase h3{font-size:21px;margin:16px 0 4px}
+.phase .what{font-size:14px;font-weight:600;color:var(--muted);margin-bottom:12px;align-self:start}
+.phase.first .what{color:var(--hero-muted)}
+.phase p{font-size:15.5px;color:var(--ink-2)}
+.phase.first p{color:#d9d4e6}
+.phase .out{margin-top:18px;padding-top:18px;font-size:14px;color:var(--muted);border-top:1px dashed var(--line);align-self:start}
+.phase.first .out{border-color:#ffffff26;color:var(--hero-muted)}
+.phase .out b{display:block;color:var(--ink);font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px}
+.phase.first .out b{color:var(--hero-ink)}
+.path-note{margin-top:28px;color:var(--ink-2);max-width:70ch}
+@media (max-width:1060px){.path{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.path{grid-template-columns:1fr}}
+
+/* AMBITI */
+.areas{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:48px}
+.area{border:1px solid var(--line);border-radius:18px;padding:36px;background:var(--card)}
+.area .num{font-size:13px;font-weight:700;letter-spacing:.2em;color:var(--orange)}
+.area h3{font-size:clamp(23px,2.6vw,28px);margin:12px 0}
+.area p{color:var(--ink-2)}
+.area ul{list-style:none;margin-top:20px;display:grid;gap:10px}
+.area li{padding-left:26px;position:relative;font-size:15.5px}
+.area li::before{content:"";position:absolute;left:0;top:11px;width:12px;height:2px;background:var(--teal)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;align-content:start}
+/* righe allineate tra i due box */
+@media (min-width:821px){.areas{row-gap:0}.area{display:grid;grid-row:span 6;grid-template-rows:subgrid;align-content:start}.area ul{align-content:start}}
+.chip{background:var(--teal-soft);color:var(--teal);font-size:13px;font-weight:600;padding:5px 11px;border-radius:8px}
+.funding{margin-top:20px;border-radius:18px;padding:32px 36px;background:var(--orange-soft);display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center}
+.funding .icon{width:56px;height:56px;border-radius:50%;background:var(--orange);color:#fff;display:grid;place-items:center;font-size:26px;font-weight:700}
+.funding h3{font-size:21px;margin-bottom:6px}
+.funding p{color:var(--ink-2);font-size:16px}
+@media (max-width:820px){.areas{grid-template-columns:1fr}.area{padding:28px 24px}.funding{grid-template-columns:1fr;padding:28px 24px}}
+
+/* RISULTATI */
+.featured{margin-top:48px;background:var(--hero-bg);color:var(--hero-ink);border-radius:22px;border:1px solid #ffffff14;padding:48px;display:grid;grid-template-columns:1fr 1.3fr;gap:48px}
+.featured .tag{display:inline-block;background:var(--orange);color:#fff;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:99px}
+.featured h3{font-size:clamp(26px,3vw,34px);margin:20px 0 12px}
+.featured .meta{color:var(--hero-muted);font-size:15px}
+.featured blockquote{margin-top:28px;padding-left:18px;border-left:3px solid var(--orange);font-size:19px;font-weight:500;line-height:1.5}
+.flow{display:grid;gap:14px}
+.flow div{background:#ffffff0d;border:1px solid #ffffff1a;border-radius:var(--radius);padding:20px 22px}
+.flow h4{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#7fd9c3;margin-bottom:8px}
+.flow div:last-child h4{color:var(--orange)}
+.flow p,.flow li{color:#ddd8e8;font-size:15.5px}
+.flow ul{padding-left:18px}
+@media (max-width:900px){.featured{grid-template-columns:1fr;padding:32px 24px;gap:28px}}
+
+
+/* INNOVAGENDA */
+.definition{font-size:clamp(26px,3.4vw,42px);font-weight:700;line-height:1.2;max-width:26ch;letter-spacing:-.02em}
+.definition em{font-style:normal;color:var(--orange)}
+.def-src{margin-top:14px;color:var(--muted);font-size:14px;max-width:70ch}
+.innovagenda-head{margin-top:64px;display:flex;align-items:baseline;gap:20px;flex-wrap:wrap}
+.innovagenda-head p{color:var(--ink-2);max-width:52ch}
+.principles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+.principle{border:1px solid var(--line);border-radius:12px;padding:18px 18px 20px;background:var(--card)}
+.principle .n{font-size:12px;font-weight:700;color:var(--orange);letter-spacing:.12em}
+.principle h3{font-size:16.5px;margin:6px 0 8px}
+.principle p{font-size:14.5px;color:var(--ink-2);line-height:1.5}
+.closing{margin-top:36px;font-size:clamp(19px,2.2vw,24px);font-weight:700;max-width:40ch}
+@media (max-width:960px){.principles{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.principles{grid-template-columns:1fr}}
+.engage{margin-top:20px;padding:12px 14px;border-radius:10px;background:var(--paper);font-size:15px;color:var(--ink-2)}
+.engage b{color:var(--ink)}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+.kpi b{display:block;font-size:28px;font-weight:800;color:var(--orange);letter-spacing:-.02em;line-height:1.1}
+.kpi span{display:block;font-size:13px;color:var(--hero-muted);line-height:1.35;margin-top:4px}
+.kpi-note{font-size:12px;color:var(--hero-muted);margin-top:12px}
+.kpi b{white-space:nowrap}
+@media (max-width:560px){.kpis{grid-template-columns:1fr;gap:14px}.kpi{display:flex;gap:14px;align-items:baseline}.kpi b{min-width:130px;font-size:26px}.kpi span{margin-top:0}}
+
+.principle{font:inherit;color:inherit;text-align:left;cursor:pointer;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
+.principle:hover,.principle:focus-visible{transform:translateY(-3px);border-color:var(--teal);outline:none}
+.principle p{flex:1}
+.principle .more{margin-top:12px;font-size:13px;font-weight:600;color:var(--orange)}
+dialog.pdlg{border:0;border-radius:20px;padding:0;max-width:760px;width:calc(100% - 32px);max-height:calc(100dvh - 48px);background:var(--card);color:var(--ink);margin:auto}
+dialog.pdlg::backdrop{background:#0e0c17b3;backdrop-filter:blur(3px)}
+.pdlg-in{padding:32px 36px 36px;position:relative}
+.pdlg .n{font-size:12px;font-weight:700;color:var(--orange);letter-spacing:.12em}
+.pdlg h3{font-size:clamp(22px,3vw,28px);margin:6px 48px 18px 0}
+.pdlg figure{margin:0 0 22px}
+.pdlg figure img{width:100%;max-width:420px;height:auto;border-radius:12px;border:1px solid var(--line);display:block;margin:0 auto}
+.pdlg .part{margin-top:14px}
+.pdlg .part b{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:4px}
+.pdlg .part p{color:var(--ink-2);font-size:16px}
+.pdlg .maxim{margin-top:22px;padding-left:16px;border-left:3px solid var(--orange);font-size:18px;font-weight:600;font-style:italic}
+.pdlg .close{position:absolute;top:22px;right:22px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:20px;cursor:pointer}
+.pdlg .plink{display:inline-block;margin-top:18px;font-size:14px;font-weight:600;color:var(--teal);text-decoration:none}
+.pdlg .plink:hover{text-decoration:underline}
+.pdlg .nav{display:flex;justify-content:space-between;margin-top:26px;gap:12px}
+.pdlg .nav button{font:600 14px/1 var(--sans);background:none;border:1px solid var(--line);color:var(--ink);padding:10px 14px;border-radius:99px;cursor:pointer}
+@media (max-width:600px){.pdlg-in{padding:26px 20px 28px}}
+
+/* CASE STUDY compatti */
+.crows{list-style:none;margin-top:44px;border-top:1px solid var(--line)}
+.crow{display:grid;grid-template-columns:200px 1fr 190px;gap:28px;align-items:center;padding:26px 4px;border-bottom:1px solid var(--line)}
+.csec{font-size:13px;font-weight:700;color:var(--teal);letter-spacing:.08em;text-transform:uppercase;line-height:1.4}
+.csec small{display:block;font-size:12px;font-weight:600;color:var(--muted);letter-spacing:.06em}
+.cbody h3{font-size:clamp(18px,1.9vw,21px);margin:0 0 4px;letter-spacing:-.01em}
+.cbody p{font-size:15.5px;color:var(--ink-2);margin:0}
+.cnum{text-align:right}
+.cnum b{display:block;font-size:clamp(28px,3vw,36px);font-weight:800;color:var(--orange-ink);letter-spacing:-.02em;line-height:1}
+.cnum span{display:block;font-size:13px;color:var(--muted);margin-top:4px}
+.cases-note{margin-top:18px;font-size:13px;color:var(--muted)}
+@media (max-width:760px){.crow{grid-template-columns:1fr;gap:8px;padding:22px 0}.cnum{text-align:left;display:flex;align-items:baseline;gap:10px}.cnum span{margin-top:0}}
+
+/* PROVE */
+.proof{background:var(--hero-bg);color:var(--hero-ink);border-top:1px solid #ffffff14;border-bottom:1px solid #ffffff14}
+.proof .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.pf{padding:26px 20px;border-left:1px solid #ffffff14}
+.pf:first-child{border-left:0;padding-left:0}
+.pf b{display:block;font-size:22px;font-weight:800;letter-spacing:-.01em;color:var(--hero-ink)}
+.pf span{display:block;font-size:14px;color:var(--hero-muted);margin-top:2px}
+@media (max-width:860px){.proof .wrap{grid-template-columns:1fr 1fr}.pf{padding:18px 12px}.pf:nth-child(3){border-left:0;padding-left:0}.pf:nth-child(n+3){border-top:1px solid #ffffff14}}
+/* INTESTAZIONI A DUE COLONNE */
+.sec-head{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:end}
+.sec-head .lead{margin-top:0}
+.section-title.wide{max-width:none}
+.sec-note{margin-top:12px;font-size:15px;color:var(--muted)}
+@media (max-width:860px){.sec-head{grid-template-columns:1fr;gap:0}.sec-head .lead{margin-top:20px}}
+/* METRICHE QUALITATIVE */
+.ck.q b{display:inline-block;font-size:14px;font-weight:700;letter-spacing:0;color:var(--orange);background:var(--orange-soft);padding:5px 11px;border-radius:99px;line-height:1.3;white-space:nowrap}
+.ck.q span{margin-top:8px}
+/* FASCIA INVITO ALL'AZIONE */
+.cta-band{background:var(--orange);color:#1d1830;padding:56px 0}
+.cta-band .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.cta-title{font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-.02em;line-height:1.15;max-width:22ch}
+.cta-band .cta-title em{display:block;font-style:normal;color:color-mix(in srgb,#1d1830 82%,var(--orange))!important}
+.btn-dark{background:#1d1830;color:#fff}
+/* INNOVAGENDA */
+.innovagenda-head{display:block}
+.innovagenda-head p{margin-top:12px;font-size:17px}
+.principle.extra{display:none}
+.principles.open .principle.extra{display:flex}
+.btn-outline{margin-top:20px;background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn-outline:hover{border-color:var(--teal)}
+/* CHI SONO */
+.about{align-items:start}
+.about-side{display:grid;gap:24px;justify-items:center}
+.about-side .creds{margin-top:0;width:100%}
+.about .role{font-size:17px;font-weight:600;color:var(--orange);margin-top:8px}
+.about .lead{margin-top:18px}
+.story-title{font-size:20px;margin:28px 0 10px}
+@media (max-width:860px){.about-side{justify-items:start}}
+/* PASSI DOPO IL MODULO */
+.steps{list-style:none;counter-reset:st;margin-top:32px;display:grid;gap:18px}
+.steps li{counter-increment:st;position:relative;padding-left:46px}
+.steps li::before{content:counter(st);position:absolute;left:0;top:0;width:30px;height:30px;border-radius:50%;background:var(--orange);color:#1d1830;font-weight:800;display:grid;place-items:center;font-size:15px}
+.steps b{display:block;color:var(--hero-ink);font-size:16px}
+.steps span{display:block;color:var(--hero-muted);font-size:15px}
+/* CHI SONO */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
+.about img{border-radius:50%;width:100%;max-width:340px;height:auto;aspect-ratio:1;object-fit:cover;justify-self:center;box-shadow:0 0 0 6px var(--card),0 0 0 7px var(--line)}
+.about .body p{color:var(--ink-2)}
+.about .body p + p{margin-top:16px}
+.creds{display:grid;gap:12px;margin-top:28px}
+.cred{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:var(--paper)}
+.cred i{flex:none;width:10px;height:10px;border-radius:50%;background:var(--teal);margin-top:7px}
+.cred:first-child i{background:var(--orange)}
+.cred b{display:block;font-size:16px}
+.cred span{font-size:14px;color:var(--muted)}
+@media (max-width:860px){.about{grid-template-columns:1fr;gap:36px}.about img{max-width:220px;justify-self:start}}
+
+
+/* ACCESSIBILITÀ */
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:12px;top:-60px;z-index:50;background:var(--btn);color:var(--btn-ink);padding:10px 16px;border-radius:10px;font-weight:700;text-decoration:none}
+.skip:focus{top:12px}
+.definition em,.principle .n,.principle .more,.area .num,.pdlg .n,.cta-band .cta-title em{color:var(--orange-ink)}
+/* MENU MOBILE */
+.menu-btn{display:none;background:none;border:1px solid #ffffff33;color:var(--hero-ink);width:42px;height:42px;border-radius:10px;cursor:pointer;align-items:center;justify-content:center}
+.menu-btn span,.menu-btn span::before,.menu-btn span::after{display:block;width:18px;height:2px;background:currentColor;border-radius:2px;position:relative;transition:transform .2s}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0}
+.menu-btn span::before{top:-6px}.menu-btn span::after{top:6px}
+nav.open .menu-btn span{background:transparent}
+nav.open .menu-btn span::before{transform:translateY(6px) rotate(45deg)}
+nav.open .menu-btn span::after{transform:translateY(-6px) rotate(-45deg)}
+@media (max-width:860px){
+  .menu-btn{display:inline-flex;margin-left:10px}
+  nav .wrap{position:relative}
+  nav .nav-right{display:flex;align-items:center}
+  nav ul li:not(:last-child){display:none}
+  nav.open ul{position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--hero-bg);border-top:1px solid #ffffff14;border-bottom:1px solid #ffffff14;padding:8px 16px 16px}
+  nav.open ul li{display:block!important}
+  nav.open ul a{display:block;padding:14px 4px;font-size:17px;color:var(--hero-ink);border-bottom:1px solid #ffffff10}
+  nav.open ul li:last-child a{margin-top:12px;text-align:center;border:0;padding:12px}
+}
+/* GRASSETTI NEI TESTI */
+main p b{font-weight:700;color:var(--ink)}
+
+/* FASE 1 · regia lungo il percorso */
+.gov{margin-top:56px;padding-top:36px;border-top:1px solid var(--line)}
+.gov-title{font-size:clamp(22px,2.6vw,28px);letter-spacing:-.02em;line-height:1.2}
+.gov-title em{font-style:normal;color:var(--orange-ink)}
+.gov-lead{color:var(--ink-2);margin-top:10px;max-width:70ch}
+.gov-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:28px}
+.gov-grid h4{font-size:16.5px;letter-spacing:-.01em;padding-top:14px;border-top:2px solid var(--teal)}
+.gov-grid p{font-size:15px;color:var(--ink-2);margin-top:6px;line-height:1.55}
+@media (max-width:900px){.gov-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.gov-grid{grid-template-columns:1fr;gap:20px}}
+.area .num span{color:var(--ink);letter-spacing:.14em;margin-left:6px}
+.crow .cbody .ctx{display:block;color:var(--muted);font-size:14.5px;margin-bottom:2px}
+.about .role-p{margin-top:16px}
+.crow .cbody .crole{display:block;margin-top:8px;font-size:13px;font-weight:600;letter-spacing:.02em;color:var(--teal)}
+/* FASE 2 · scelta dell'ambito nel modulo */
+.scope{border:0;padding:0;margin:0;display:grid;gap:8px;min-width:0}
+.scope legend{font-size:13px;font-weight:600;color:var(--hero-muted);padding:0;margin-bottom:8px}
+.scope legend small{font-weight:400;opacity:.8}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{position:relative;display:inline-flex;font-size:14px;font-weight:500;color:var(--hero-ink);cursor:pointer}
+.pill input{position:absolute;opacity:0;width:1px;height:1px}
+.pill span{display:inline-block;padding:8px 14px;border-radius:99px;border:1px solid #ffffff2e;background:#ffffff0a;line-height:1.3;transition:background .15s,border-color .15s}
+.pill:hover span{border-color:#ffffff66}
+.pill input:checked+span{background:var(--btn);border-color:var(--btn);color:var(--btn-ink);font-weight:600}
+.pill input:focus-visible+span{outline:3px solid var(--orange);outline-offset:2px}
+.form-note{font-size:13.5px;color:var(--hero-muted);line-height:1.5;margin-top:-2px}
+/* parole intere nei box del percorso */
+.phase{grid-row:span 4}
+.phase h3.word{font-size:clamp(23px,2.2vw,29px);font-weight:800;margin:0 0 6px;letter-spacing:-.02em;line-height:1.1}
+.phase h3.word .ini{color:var(--orange);font-size:1.55em;line-height:.9;letter-spacing:-.03em}
+/* CONTATTI */
+.contact{background:var(--hero-bg);color:var(--hero-ink)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.contact .eyebrow{color:var(--orange)}
+.contact .lead{color:var(--hero-muted)}
+.contact-alt{margin-top:28px;font-size:15px;color:var(--hero-muted)}
+.contact-alt a{color:var(--hero-ink)}
+form{background:#ffffff0a;border:1px solid #ffffff1f;border-radius:18px;padding:28px;display:grid;gap:14px}
+label{font-size:13px;font-weight:600;color:var(--hero-muted);display:grid;gap:6px}
+input,textarea{font:inherit;font-size:16px;color:var(--hero-ink);background:#ffffff0d;border:1px solid #ffffff26;border-radius:10px;padding:11px 13px;width:100%}
+input:focus,textarea:focus{outline:2px solid var(--orange);outline-offset:1px}
+textarea{min-height:110px;resize:vertical}
+.form-status{font-size:14px;color:var(--hero-muted);min-height:1.4em}
+.form-status.ok{color:#7fd9c3}
+.form-status.err{color:#ffb38a}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+form{position:relative}
+.consent{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:13px;line-height:1.45}
+.consent input{width:18px;height:18px;margin-top:1px;flex:none;accent-color:var(--orange)}
+.consent a{color:var(--hero-ink)}
+form button[disabled]{opacity:.6;cursor:wait}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr;gap:40px}form{padding:22px}}
+footer{background:var(--hero-bg);color:var(--hero-muted);font-size:13px;border-top:1px solid #ffffff14;padding:24px 0}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer a{color:var(--hero-muted)}
+@media (max-width:600px){section{padding:72px 0}.wrap{padding:0 16px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://disbit.it/#website", "url": "https://disbit.it/", "name": "DISBIT", "alternateName": ["DISBIT · Ilario Tornese", "disbit.it"], "inLanguage": ["it", "en"], "publisher": {"@id": "https://disbit.it/#disbit"}}, {"@type": "ProfessionalService", "@id": "https://disbit.it/#disbit", "name": "DISBIT", "url": "https://disbit.it/", "logo": "https://disbit.it/assets/apple-touch-icon.png", "image": "https://disbit.it/assets/og-disbit.png", "description": "Governance di programmi complessi, reingegnerizzazione e digitalizzazione dei processi con il metodo DISBIT: Discover, Invent, Simplify, Build IT.", "slogan": "Processi più efficienti. Trasformazioni sotto controllo.", "vatID": "IT17464071004", "email": "info@disbit.it", "address": {"@type": "PostalAddress", "addressLocality": "Roma", "addressCountry": "IT"}, "areaServed": {"@type": "Country", "name": "Italia"}, "founder": {"@id": "https://disbit.it/#ilario"}, "sameAs": ["https://www.linkedin.com/in/ilario-tornese/"], "knowsAbout": ["Innovation management", "Digital transformation", "Program management", "Service governance", "Process reengineering", "Process automation", "RFID", "Industrial IoT", "Data analytics"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Servizi DISBIT", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Service & Program Governance", "description": "Governance di servizi, commesse e programmi complessi: project e program management, coordinamento di stakeholder e team, gestione di priorità, dipendenze, criticità e KPI, reporting e supporto alle decisioni.", "provider": {"@id": "https://disbit.it/#disbit"}}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Operations & Industrial Digitalization", "description": "Ottimizzazione dei processi logistici e produttivi con soluzioni tecnologiche (IoT, RFID, Computer Vision): automazione, tracciabilità, integrazione dei sistemi e valorizzazione dei dati, fattibilità, business case e ROI.", "provider": {"@id": "https://disbit.it/#disbit"}}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Process Reengineering", "description": "Analisi e reingegnerizzazione dei processi con il metodo DISBIT (Discover, Invent, Simplify, Build IT): la tecnologia arriva dopo la comprensione del problema.", "provider": {"@id": "https://disbit.it/#disbit"}}}]}, "identifier": {"@type": "PropertyValue", "propertyID": "Partita IVA", "value": "17464071004"}, "contactPoint": {"@type": "ContactPoint", "email": "info@disbit.it", "contactType": "informazioni commerciali", "availableLanguage": ["it", "en"]}}, {"@type": "Person", "@id": "https://disbit.it/#ilario", "name": "Ilario Tornese", "jobTitle": "Ingegnere gestionale · Innovation Manager", "url": "https://disbit.it/#chi-sono", "image": "https://disbit.it/assets/ilario-tornese-ritratto.jpg", "worksFor": {"@id": "https://disbit.it/#disbit"}, "sameAs": ["https://www.linkedin.com/in/ilario-tornese/"], "alumniOf": {"@type": "CollegeOrUniversity", "name": "Università di Roma Tor Vergata"}, "hasCredential": [{"@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Innovation Manager certificato UNI 11814", "recognizedBy": {"@type": "Organization", "name": "CEPAS (Bureau Veritas)"}}, {"@type": "EducationalOccupationalCredential", "credentialCategory": "license", "name": "Ingegnere iscritto all'Ordine degli Ingegneri di Roma, Sez. A, n. 32506", "recognizedBy": {"@type": "Organization", "name": "Ordine degli Ingegneri della Provincia di Roma"}, "identifier": {"@type": "PropertyValue", "propertyID": "Ordine degli Ingegneri della Provincia di Roma", "value": "32506"}}, {"@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "Laurea Specialistica in Ingegneria Gestionale"}]}, {"@type": "WebPage", "@id": "https://disbit.it/#webpage", "url": "https://disbit.it/", "inLanguage": "it", "name": "DISBIT | Management, Governance e Process Innovation", "about": {"@id": "https://disbit.it/#disbit"}, "isPartOf": {"@id": "https://disbit.it/#website"}}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Salta al contenuto</a>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="brand"><img src="assets/disbit-logo-light.svg" alt="DISBIT" width="124" height="19"><span>Ilario Tornese</span></a>
+    <div class="nav-right">
+    <ul id="menu">
+      <li><a href="#come">Come lavoro</a></li>
+      <li><a href="#con-chi">Con chi lavoro</a></li>
+      <li><a href="#risultati">Risultati</a></li>
+      <li><a href="#chi-sono">Chi sono</a></li>
+      <li><a href="#innovagenda">Innovagenda</a></li>
+      <li class="lang-li"><a href="/en/" class="lang" hreflang="en" lang="en" title="English version">EN</a></li>
+      <li><a href="#contatti" class="nav-cta">Parliamone</a></li>
+    </ul>
+    <button class="menu-btn" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="menu"><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Management &amp; Process Innovation</p>
+      <h1>Processi più efficienti. <em>Trasformazioni sotto controllo.</em></h1>
+      <p class="intro">Affianco aziende e fornitori di servizi nell'analisi, nella riprogettazione e nella digitalizzazione dei processi. Coordino business, persone e tecnologia per rendere governabili le iniziative complesse e trasformare le inefficienze in <b>risultati misurabili</b>.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#contatti">Parliamone →</a>
+        <a class="btn btn-ghost" href="#come">Come lavoro</a>
+      </div>
+      <div class="who"><i></i><span>DISBIT nasce da <b>Ilario Tornese</b>, ingegnere e Innovation Manager certificato</span></div>
+    </div>
+    <div class="hero-art" aria-hidden="true"><canvas id="art"></canvas></div>
+  </div>
+</header>
+
+<div class="proof" aria-label="Credenziali">
+  <div class="wrap">
+    <div class="pf"><b>15+ anni</b><span>analisi di processo, progetti e trasformazione</span></div>
+    <div class="pf"><b>UNI 11814</b><span>Innovation Manager certificato</span></div>
+    <div class="pf"><b>Ingegnere</b><span>Ordine di Roma, Sez. A</span></div>
+    <div class="pf"><b>5 settori</b><span>in Italia e all'estero</span></div>
+  </div>
+</div>
+
+<main id="main">
+<section id="segnali">
+  <div class="wrap">
+    <p class="eyebrow">Ti riconosci?</p>
+    <h2 class="section-title">Il tempo si perde quasi sempre negli stessi punti.</h2>
+    <div class="signals">
+      <div class="signal">Il tuo cliente ti chiede lo stato del servizio, e tu devi ricostruirlo ogni volta.</div>
+      <div class="signal">Per sapere a che punto è un'attività devi chiedere a tre persone.</div>
+      <div class="signal">Il coordinamento del team si mangia il margine della commessa.</div>
+      <div class="signal">Inventari, avanzamenti o tracciabilità si registrano ancora a mano.</div>
+      <div class="signal">Lo stesso dato vive in più file, e i numeri non coincidono mai.</div>
+      <div class="signal">Il report per la direzione richiede giorni, ed è già vecchio quando arriva.</div>
+    </div>
+    <p class="signals-foot">Non serve rivoluzionare l'azienda. <span>Serve partire da un processo, misurarlo e renderlo semplice.</span></p>
+  </div>
+</section>
+
+<section id="come" class="alt">
+  <div class="wrap">
+    <p class="eyebrow">Come lavoro</p>
+    <h2 class="section-title">Il percorso DISBIT</h2>
+    <p class="lead">Quattro fasi, ciascuna con un risultato concreto. <b>La tecnologia arriva per ultima</b>: solo dopo aver capito, progettato e semplificato. E <b>puoi fermarti dopo ogni fase</b>, decidendo con i numeri in mano.</p>
+    <div class="path">
+      <div class="phase first">
+        <h3 class="word"><span class="ini">D</span>iscover</h3>
+        <div class="what">Assessment del processo</div>
+        <p>Analizzare i bisogni, i processi esistenti (as-is) e le opportunità offerte dalle tecnologie emergenti.</p>
+        <div class="out"><b>Ottieni</b>Mappa del processo as-is, punti di spreco, opportunità tecnologiche e stima del valore recuperabile.</div>
+      </div>
+      <div class="phase">
+        <h3 class="word"><span class="ini">I</span>nvent</h3>
+        <div class="what">Progetto e business case</div>
+        <p>Progettare soluzioni innovative su misura, complete di architettura, business case e analisi del ritorno sull'investimento (ROI).</p>
+        <div class="out"><b>Ottieni</b>Architettura della soluzione, piano di realizzazione, business case con ROI e opzioni di finanziamento.</div>
+      </div>
+      <div class="phase">
+        <h3 class="word"><span class="ini">S</span>implify</h3>
+        <div class="what">Reingegnerizzazione dei processi</div>
+        <p>Semplificare flussi e procedure operative eliminando passaggi ridondanti, per garantire che l'organizzazione adotti il nuovo metodo di lavoro senza attriti.</p>
+        <div class="out"><b>Ottieni</b>Flussi ridisegnati, regole chiare, ruoli e responsabilità definiti, un'organizzazione pronta ad adottarli.</div>
+      </div>
+      <div class="phase">
+        <h3 class="word"><span class="ini">B</span>uild</h3>
+        <div class="what">Direzione del programma</div>
+        <p>Dirigere e gestire programmi di trasformazione complessi, garantendo il rispetto di tempi, budget e standard di qualità.</p>
+        <div class="out"><b>Ottieni</b>Soluzione realizzata e adottata, persone formate, risultati misurati sui KPI concordati.</div>
+      </div>
+      <div class="phase it-phase">
+        <h3 class="word"><span class="ini">IT</span></h3>
+        <div class="what">Tecnologia, per ultima</div>
+        <p>Information Technology, ma anche «it»: ciò che alla fine si costruisce. È la parte più solida.</p>
+        <div class="out"><b>Ottieni</b>Tecnologia scelta sul processo, integrata e pronta a evolvere.</div>
+      </div>
+    </div>
+    <div class="gov">
+      <h3 class="gov-title">Lungo tutto il percorso, <em>una sola regia.</em></h3>
+      <p class="gov-lead">Nelle iniziative complesse il valore si perde tra un passaggio e l'altro: tra chi decide, chi esegue e chi usa il risultato. Il mio contributo consiste nel tenere insieme il percorso, dall'analisi alla realizzazione.</p>
+      <div class="gov-grid">
+        <div><h4>Visione end-to-end</h4><p>Processi, sistemi e dipendenze letti come un unico flusso, non per compartimenti.</p></div>
+        <div><h4>Allineamento</h4><p>Gli obiettivi del management guidano le scelte di progetto e di realizzazione.</p></div>
+        <div><h4>Governance</h4><p>Responsabilità, priorità, avanzamento e rischi chiari e sotto controllo, per tutti.</p></div>
+        <div><h4>Verifica del valore</h4><p>I risultati si misurano sugli indicatori concordati, fase dopo fase.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="con-chi">
+  <div class="wrap">
+    <p class="eyebrow">Con chi lavoro</p>
+    <h2 class="section-title wide">Due situazioni, lo stesso problema.</h2>
+    <p class="lead">Qualcosa di complesso da governare, che oggi si regge a forza di persone, file e solleciti.</p>
+    <div class="areas">
+      <article class="area">
+        <span class="num">01<span>SERVICE &amp; PROGRAM GOVERNANCE</span></span>
+        <h3>Chi eroga servizi e progetti</h3>
+        <p>Società di consulenza, system integrator, fornitori di tecnologia e aziende che gestiscono servizi, commesse e programmi complessi, e devono renderli <b>governabili, misurabili e redditizi</b>.</p>
+        <ul>
+          <li>Governance di servizi, commesse e programmi</li>
+          <li>Project e program management</li>
+          <li>Coordinamento di stakeholder e team</li>
+          <li>Priorità, dipendenze, criticità e KPI sotto controllo</li>
+          <li>Reporting e supporto alle decisioni del management</li>
+        </ul>
+        <p class="engage"><b>Come intervengo:</b> affianco il team in modo continuativo, come responsabile del servizio o della sua governance, oppure guido un singolo programma o progetto di ottimizzazione.</p>
+        <div class="chips"><span class="chip">Governo del servizio</span><span class="chip">Piattaforme su misura</span><span class="chip">Power BI</span><span class="chip">AI applicata</span></div>
+      </article>
+      <article class="area">
+        <span class="num">02<span>OPERATIONS &amp; INDUSTRIAL DIGITALIZATION</span></span>
+        <h3>Chi gestisce operations e logistica</h3>
+        <p>Aziende che producono, movimentano o manutengono beni e vogliono <b>processi logistici più efficienti</b>. Li ottimizzo con soluzioni tecnologiche (IoT, RFID, Computer Vision): meno passaggi manuali, meno errori, visibilità in tempo reale su materiali, prodotti e asset.</p>
+        <ul>
+          <li>Analisi e reingegnerizzazione dei processi</li>
+          <li>Automazione e miglioramento operativo</li>
+          <li>Tracciabilità di prodotti, semilavorati e asset</li>
+          <li>Integrazione dei sistemi e valorizzazione dei dati</li>
+          <li>Fattibilità, business case e ROI</li>
+        </ul>
+        <p class="engage"><b>Come intervengo:</b> a progetto, partendo dall'Assessment di un processo: prima lo semplifico, poi scelgo la tecnologia.</p>
+        <div class="chips"><span class="chip">RFID · NFC</span><span class="chip">IoT</span><span class="chip">Computer Vision</span><span class="chip">Integrazione con i gestionali</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="risultati" class="alt">
+  <div class="wrap">
+    <p class="eyebrow">Risultati</p>
+    <h2 class="section-title wide">Settori diversi, stesso metodo.</h2>
+    <p class="sec-note">Alcuni progetti degli ultimi anni in contesti enterprise.</p>
+    <ul class="crows">
+      <li class="crow">
+        <span class="csec">Utilities<small>Servizi</small></span>
+        <div class="cbody"><h3>Un servizio di test governato da un dato unico</h3><p><span class="ctx">Stato delle attività disperso tra persone, file e canali; ogni richiesta del cliente apriva una catena di solleciti.</span>Processi mappati end-to-end e una sola piattaforma, dalla gestione del team al report per il cliente.<span class="crole">Ruolo: Strategy &amp; Team Leader del Servizio</span></p></div>
+        <div class="cnum"><b>–25%*</b><span>tempo per consolidare le informazioni</span></div>
+      </li>
+      <li class="crow">
+        <span class="csec">Moda e lusso<small>Manifattura</small></span>
+        <div class="cbody"><h3>Tracciabilità lungo tutta la filiera</h3><p><span class="ctx">Filiera internazionale senza visibilità end-to-end: controllo qualità difficile e tempi di attraversamento non ottimizzati.</span>Semilavorati tracciati pezzo per pezzo con RFID, performance misurate in BI.<span class="crole">Ruolo: Project Lead &amp; Process Architect</span></p></div>
+        <div class="cnum"><b>–20%*</b><span>costi di non conformità</span></div>
+      </li>
+      <li class="crow">
+        <span class="csec">Oil &amp; Gas<small>Logistica</small></span>
+        <div class="cbody"><h3>Inventario automatico in ambiente estremo</h3><p><span class="ctx">Asset metallici registrati a mano in un cantiere operativo extra-europeo: condizioni ambientali estreme, errori costosi e ritardi logistici.</span>Asset identificati in automatico con RFID UHF e un middleware su misura, integrato nel gestionale.<span class="crole">Ruolo: Innovation Specialist &amp; Project Lead</span></p></div>
+        <div class="cnum"><b>–80%*</b><span>tempo di inventario</span></div>
+      </li>
+      <li class="crow">
+        <span class="csec">Facility management<small>Servizi</small></span>
+        <div class="cbody"><h3>Dai dati come costo ai dati come servizio</h3><p><span class="ctx">Dati frammentati tra le business unit e reporting lento, visto solo come un costo.</span>Un servizio di analytics costruito da zero (KPI, modello dati, dashboard) e venduto ai clienti a canone.<span class="crole">Ruolo: Solution Architect &amp; Business Analyst</span></p></div>
+        <div class="cnum"><b>–50%*</b><span>tempo di reportistica</span></div>
+      </li>
+    </ul>
+    <p class="cases-note">* Stime di impatto riferite ai singoli progetti, non misurazioni certificate.</p>
+  </div>
+</section>
+
+<section class="cta-band" aria-label="Parliamone">
+  <div class="wrap">
+    <p class="cta-title">Un programma da governare o un processo da ottimizzare? <em>Partiamo da lì.</em></p>
+    <a class="btn btn-dark" href="#contatti">Parliamone →</a>
+  </div>
+</section>
+
+<section id="chi-sono" class="alt">
+  <div class="wrap about">
+    <div class="about-side">
+      <img src="assets/ilario-tornese-ritratto.jpg?v=4" alt="Ritratto di Ilario Tornese" width="570" height="570" loading="lazy">
+      <div class="creds">
+        <div class="cred"><i></i><div><b>Innovation Manager certificato e accreditato MIMIT</b><span>Certificazione UNI 11814 n. 394 · Bureau Veritas / CEPAS · 2025</span></div></div>
+        <div class="cred"><i></i><div><b>Ordine degli Ingegneri di Roma</b><span>n. 32506 · Sez. A, Industriale</span></div></div>
+        <div class="cred"><i></i><div><b>Laurea Specialistica in Ingegneria Gestionale</b><span>Logistica e Trasporti · Università di Roma Tor Vergata</span></div></div>
+      </div>
+    </div>
+    <div class="body">
+      <p class="eyebrow">Chi sono</p>
+      <h2 class="section-title">Ilario Tornese</h2>
+      <p class="role">Ingegnere gestionale · Innovation Manager</p>
+      <p class="lead">Da oltre quindici anni lavoro nel <b>punto d'incontro tra business e tecnologia</b>, e oggi guido iniziative di trasformazione: traduco gli obiettivi del management in processi, sistemi e risultati misurabili.</p>
+      <p class="role-p">Nei progetti complessi sono il punto di raccordo tra management, referenti di business e team tecnici. Tengo la regia dell'intero percorso, dall'analisi alla realizzazione: chiarisco obiettivi e responsabilità, governo priorità, dipendenze e rischi, e verifico che ogni fase produca il valore atteso, misurato su indicatori concordati con il cliente.</p>
+      <h3 class="story-title">Perché DISBIT</h3>
+      <p>DISBIT nasce dalla mia esperienza nella gestione della complessità, dove business, organizzazione e tecnologia devono convergere. Dentro ci sono la capacità di sintesi, l'abitudine a individuare subito il percorso critico, la meticolosità con cui opero, un metodo maturato in anni di professione e una regola che per me non ha alternative: <b>lavorare in qualità</b>.</p>
+      <p>Anche il marchio lo racconta. I tagli attraversano D, I, S e B, le fasi in cui si analizza, si progetta e si semplifica. IT resta intero: la tecnologia arriva per ultima, ed è la parte solida.</p>
+      <p>Ho guidato programmi di digitalizzazione, automazione e analisi dei dati in industria, logistica, energia, servizi e pubblica amministrazione, in Italia e all'estero. Lavoro come consulente indipendente e, quando un progetto lo richiede, mi affianco a partner tecnologici selezionati restando <b>l'unico riferimento, dall'analisi ai risultati</b>. Verifico anche se un progetto può accedere a incentivi, crediti d'imposta e finanza agevolata.</p>
+    </div>
+  </div>
+</section>
+
+<section id="innovagenda">
+  <div class="wrap">
+    <p class="eyebrow">Cos'è l'innovazione</p>
+    <p class="definition">Un'entità nuova o modificata che <em>genera o ridistribuisce valore</em>.</p>
+    <p class="def-src">Definizione della norma ISO 56000, alla base della gestione dell'innovazione e della mia certificazione di Innovation Manager (UNI 11814).</p>
+    <p class="lead">Per questo, in un progetto DISBIT, la tecnologia non è mai l'obiettivo. <b>Conta il valore che produce</b>: tempo restituito alle persone, errori evitati, decisioni prese su dati certi.</p>
+    <div class="innovagenda-head">
+      <h2 class="section-title">INNOVAGENDA</h2>
+      <p>12 principi per la gestione strategica dell'innovazione, ispirati alla serie ISO 56000. Non una checklist, ma la lente manageriale che il metodo DISBIT applica ai processi.</p>
+    </div>
+    <div class="principles">
+        <button class="principle" type="button" data-i="0"><span class="n">#01</span><h3>Realizzazione del valore</h3><p>Il valore non nasce dall'idea, ma dalla sua realizzazione concreta.</p><span class="more">Approfondisci →</span></button>
+        <button class="principle" type="button" data-i="1"><span class="n">#02</span><h3>Gestione dell'incertezza</h3><p>L'incertezza non va eliminata, ma governata: è il terreno su cui nasce l'innovazione significativa.</p><span class="more">Approfondisci →</span></button>
+        <button class="principle" type="button" data-i="2"><span class="n">#03</span><h3>Orientamento strategico</h3><p>Senza orientamento strategico, l'innovazione diventa dispersione invece che leva competitiva.</p><span class="more">Approfondisci →</span></button>
+        <button class="principle" type="button" data-i="3"><span class="n">#04</span><h3>Approccio sistemico</h3><p>L'innovazione diventa una capacità reale solo quando smette di essere episodica.</p><span class="more">Approfondisci →</span></button>
+        <button class="principle extra" type="button" data-i="4"><span class="n">#05</span><h3>Leadership orientata al futuro</h3><p>La leadership non protegge solo la stabilità: costruisce la direzione del cambiamento.</p><span class="more">Approfondisci →</span></button>
+        <button class="principle extra" type="button" data-i="5"><span class="n">#06</span><h3>Cultura dell'innovazione</h3><p>La cultura decide cosa è consentito fare quando si innova.</p><span class="more">Approfondisci →</span></button>
+        <button class="principle extra" type="button" data-i="6"><span class="n">#07</span><h3>Sfruttamento delle intuizioni</h3><p>Gli insight trasformano l'informazione in scelte: senza, si innova a vista.</p><span class="more">Approfondisci →</span></button>
+        <button class="principle extra" type="button" data-i="7"><span class="n">#08</span><h3>Adattabilità</h3><p>L'adattabilità è una capacità progettata, non una reazione improvvisata.</p><span class="more">Approfondisci →</span></button>
+        <button class="principle extra" type="button" data-i="8"><span class="n">#09</span><h3>Innovazione aperta</h3><p>L'ecosistema accelera ciò che l'organizzazione, da sola, tende a rallentare.</p><span class="more">Approfondisci →</span></button>
+        <button class="principle extra" type="button" data-i="9"><span class="n">#10</span><h3>Gestione della conoscenza</h3><p>La conoscenza diventa vantaggio solo quando è memoria collettiva, non sapere individuale.</p><span class="more">Approfondisci →</span></button>
+        <button class="principle extra" type="button" data-i="10"><span class="n">#11</span><h3>Valutazione delle prestazioni</h3><p>Misurare bene non è controllo: è governo dell'apprendimento e della rotta.</p><span class="more">Approfondisci →</span></button>
+        <button class="principle extra" type="button" data-i="11"><span class="n">#12</span><h3>Integrità e responsabilità sociale</h3><p>L'integrità non è un vincolo a posteriori: è progettazione responsabile fin dall'inizio.</p><span class="more">Approfondisci →</span></button>
+    </div>
+    <a class="btn btn-outline" href="/innovagenda/">Vedi tutti i 12 principi →</a>
+    <p class="closing">L'innovazione non fallisce per mancanza di idee, ma per assenza di governo.</p>
+  </div>
+</section>
+
+
+<dialog class="pdlg" id="pdlg" aria-modal="true" aria-labelledby="pdlg-title">
+  <div class="pdlg-in">
+    <button class="close" type="button" aria-label="Chiudi" data-close>×</button>
+    <span class="n" id="pdlg-n"></span>
+    <h3 id="pdlg-title"></h3>
+    <figure id="pdlg-fig" hidden><img id="pdlg-img" alt="" width="840" height="1260" loading="lazy"></figure>
+    <div class="part"><b>Il principio</b><p id="pdlg-p"></p></div>
+    <div class="part"><b>L'errore più frequente</b><p id="pdlg-e"></p></div>
+    <div class="part"><b>Come si riconosce</b><p id="pdlg-s"></p></div>
+    <div class="part"><b>Da dove partire</b><p id="pdlg-d"></p></div>
+    <p class="maxim" id="pdlg-m"></p>
+    <a class="plink" id="pdlg-link" href="/innovagenda/">Apri la pagina di questo principio →</a>
+    <div class="nav"><button type="button" data-step="-1">← Precedente</button><button type="button" data-step="1">Successivo →</button></div>
+  </div>
+</dialog>
+
+<section id="contatti" class="contact">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Parliamone</p>
+      <h2 class="section-title">Raccontami la tua sfida o il processo su cui intervenire.</h2>
+      <p class="lead">Partiamo da una conversazione, senza impegno, per capire se e come posso aiutarti.</p>
+      <ol class="steps">
+        <li><b>Mi racconti la tua esigenza</b><span>Bastano due righe nel modulo.</span></li>
+        <li><b>Ti ricontatto</b><span>e ne parliamo insieme.</span></li>
+      </ol>
+      <p class="contact-alt">Puoi trovarmi anche su <a href="https://www.linkedin.com/in/ilario-tornese/" target="_blank" rel="noopener">LinkedIn ↗</a></p>
+    </div>
+    <form id="form" action="https://formspree.io/f/xwlvnrqv" method="POST" novalidate>
+      <input type="hidden" name="_subject" value="Nuova richiesta dal sito DISBIT">
+      <label class="hp" aria-hidden="true">Non compilare<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+      <label for="f-nome">Nome e cognome<input id="f-nome" name="nome" required autocomplete="name"></label>
+      <label for="f-azienda">Azienda<input id="f-azienda" name="azienda" autocomplete="organization"></label>
+      <label for="f-email">Email<input id="f-email" name="email" type="email" required autocomplete="email"></label>
+      <fieldset class="scope">
+        <legend>Di che ambito si tratta? <small>(facoltativo)</small></legend>
+        <div class="pills">
+          <label class="pill"><input type="radio" name="ambito" value="Governance di servizi o programmi complessi"><span>Governance di servizi o programmi complessi</span></label>
+          <label class="pill"><input type="radio" name="ambito" value="Digitalizzazione o ottimizzazione dei processi"><span>Digitalizzazione o ottimizzazione dei processi</span></label>
+          <label class="pill"><input type="radio" name="ambito" value="Entrambi / Da valutare insieme"><span>Entrambi / Da valutare insieme</span></label>
+        </div>
+      </fieldset>
+      <label for="f-processo">Di cosa si tratta?<textarea id="f-processo" name="processo" required placeholder="Descrivi in breve l'obiettivo o la criticità principale…"></textarea></label>
+      <label for="f-privacy" class="consent"><input type="checkbox" id="f-privacy" name="privacy" value="accettata" required><span>Ho letto l'<a href="privacy.html" target="_blank" rel="noopener">informativa privacy</a>, e so come vengono trattati i dati che invio.</span></label>
+      <button class="btn btn-primary" type="submit">Invia la richiesta →</button>
+      <p class="form-note">Ti ricontatto al più presto per un primo confronto di 30 minuti, senza impegno, per inquadrare priorità e fattibilità.</p>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap"><span class="foot-brand"><img src="assets/disbit-logo-light.svg" alt="DISBIT" width="92" height="14"></span><span>DISBIT di Ilario Tornese · P.IVA 17464071004</span><span><a href="privacy.html">Privacy</a> · © 2026</span></div>
+</footer>
+
+<script>
+(()=>{const n=document.querySelector('nav'),b=n.querySelector('.menu-btn');if(!b)return;const set=o=>{n.classList.toggle('open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Chiudi il menu':'Apri il menu')};b.addEventListener('click',()=>set(!n.classList.contains('open')));n.querySelectorAll('ul a').forEach(a=>a.addEventListener('click',()=>set(false)));document.addEventListener('keydown',e=>{if(e.key==='Escape')set(false)})})();
+
+(()=>{
+  const P=[{"p": "Un’innovazione esiste solo quando qualcuno la usa e ne ricava un beneficio. Prima di quel momento è un’idea, un prototipo, al massimo una promessa. Il valore può essere economico, ma anche tempo risparmiato, un servizio migliore, un rischio in meno: conta che lo riconosca chi lo riceve.", "e": "Si misura l’innovazione da quante idee si producono. Brainstorming, hackathon, prototipi: tutto utile, ma se nessuno si chiede chi adotterà la soluzione, quando e con quali risorse, l’energia si ferma a metà strada.", "s": "Un cassetto pieno di proof of concept riusciti e mai entrati in produzione. Team entusiasti al primo pilota e disillusi al terzo. Budget spesi che nessuno riesce a collegare a un risultato.", "d": "Per ogni iniziativa, una domanda prima ancora di cominciare: chi la userà, da quando, e come capiremo che ha funzionato?", "m": "Senza un percorso verso l’adozione, l’innovazione resta un esercizio sterile: il valore non nasce dall’idea, ma dalla sua realizzazione concreta."}, {"p": "Quando si innova mancano informazioni: sul mercato, sulla tecnologia, sulla reazione delle persone. Non è un difetto del progetto, è la sua natura. Governare l’incertezza significa trasformare, un passo alla volta, le ipotesi in fatti verificati.", "e": "Si chiede a un’idea nuova la stessa certezza che si chiede a un processo collaudato: business plan a tre anni, ROI garantito, nessuno scostamento dal piano. Ma il rischio si calcola, l’incertezza no. Si riduce solo provando.", "s": "Il portafoglio contiene solo miglioramenti incrementali, perché sono gli unici che superano il comitato. Le idee più coraggiose vengono abbandonate al primo intoppo. I progetti interrotti finiscono in archivio come perdite, senza che nessuno ne ricavi una lezione.", "d": "Sostituire la domanda «quanto renderà?» con «qual è l’ipotesi più rischiosa, e come la verifichiamo in un mese spendendo poco?».", "m": "L’incertezza non va eliminata, ma governata: è il terreno su cui nasce l’innovazione significativa."}, {"p": "L’innovazione ha bisogno di una direzione: obiettivi chiari, condivisi e coerenti con ciò che l’azienda vuole diventare. È la strategia a dire dove investire e, soprattutto, dove non farlo.", "e": "Si innova per reazione: la tecnologia del momento, la richiesta di un cliente importante, l’annuncio di un concorrente. Ogni iniziativa ha senso presa da sola, ma nessuno ha deciso quali contano davvero.", "s": "Tanti progetti in parallelo che si contendono le stesse persone e lo stesso budget. Indicatori diversi per ogni iniziativa, quindi nessun confronto possibile. Isole di innovazione che non cambiano il modo in cui l’azienda compete.", "d": "Scrivere in una pagina i tre obiettivi che l’innovazione deve servire nei prossimi due anni, e chiedere a ogni progetto a quale dei tre contribuisce.", "m": "Senza orientamento strategico, l’innovazione diventa dispersione invece che leva competitiva."}, {"p": "L’innovazione non è un reparto né un evento. È il risultato di strategia, cultura, processi e risorse che lavorano nella stessa direzione: se uno di questi elementi va per conto suo, frena tutti gli altri.", "e": "Si affida l’innovazione a un team dedicato, a un laboratorio o a un singolo dipartimento tecnico, e ci si aspetta che il resto dell’azienda si adegui. Ma ciò che nasce isolato tende a restare isolato.", "s": "Progetti pilota che funzionano e non scalano. Successi che dipendono da una persona brillante e spariscono quando cambia ruolo. Colli di bottiglia ricorrenti tra le funzioni, e lezioni apprese che restano chiuse nel singolo progetto.", "d": "Riprendere l’ultimo progetto innovativo e ricostruire chi ha dovuto dire sì perché andasse avanti: acquisti, IT, legale, operations. Lì si vede dove il sistema regge e dove si inceppa.", "m": "L’innovazione diventa una capacità reale solo quando smette di essere episodica."}, {"p": "Chi guida un’organizzazione deve tenere insieme due compiti: far funzionare bene l’oggi e preparare il domani. Servono la curiosità per mettere in discussione ciò che ha sempre funzionato e una visione che dia un senso al cambiamento.", "e": "L’attenzione si concentra sull’efficienza e sul risultato del trimestre. Mettere in discussione un modello di successo sembra un rischio inutile, e la leadership finisce per coincidere con il controllo.", "s": "L’azienda reagisce in ritardo ai cambiamenti del mercato. Le persone vivono ogni novità come un disturbo. E quando un concorrente cambia le regole del gioco, ci si accorge di non avere alternative pronte.", "d": "Riservare all’esplorazione una parte, anche piccola, del tempo del management e del budget, e renderne conto con la stessa serietà del resto.", "m": "La leadership non protegge solo la stabilità: costruisce la direzione del cambiamento."}, {"p": "La cultura è l’insieme di ciò che in un’azienda si premia, si tollera e si punisce. Una cultura dell’innovazione fa convivere la libertà di esplorare con il rigore di chi deve consegnare.", "e": "Si comprano strumenti, si introducono procedure, si nomina un responsabile, e si dà per scontato che le persone cambino comportamento. Ma se il sistema continua a premiare solo chi non sbaglia, nessuno si prenderà un rischio.", "s": "Strumenti nuovi adottati a metà. Errori nascosti invece che discussi. Funzioni che si scambiano informazioni solo quando sono obbligate. La routine diventa il posto più sicuro dove stare.", "d": "Guardare l’ultima iniziativa fallita: chi ne ha pagato il prezzo, e che cosa ha imparato l’azienda. La risposta dice più di qualunque carta dei valori.", "m": "La cultura decide cosa è «consentito» fare quando si innova."}, {"p": "Un insight non è un dato. È la comprensione profonda di un bisogno, spesso non espresso, che apre un’opportunità. Nasce dal collegare fonti diverse (clienti, operatori, mercato, tendenze) e dal guardare oltre le richieste esplicite.", "e": "Si confonde la quantità di dati con la conoscenza. Si analizzano lo storico interno e le richieste dei clienti attuali, e si perdono i segnali deboli che anticipano il cambiamento.", "s": "Idee poco distintive e facili da copiare. Difficoltà a scegliere su quali progetti puntare, perché manca una base di evidenze condivisa. Prodotti e processi che arrivano sul mercato già superati.", "d": "Prima di progettare qualunque soluzione, passare del tempo dove il problema accade: in magazzino, allo sportello, accanto a chi usa davvero il processo. Molti insight stanno lì, non nei report.", "m": "Gli insight trasformano l’informazione in scelte: senza, si innova «a vista»."}, {"p": "L’adattabilità è la capacità di riconfigurare strutture, processi, competenze e risorse quando il contesto cambia. Non è improvvisazione: è un’organizzazione progettata per poter cambiare.", "e": "Si ottimizza tutto per l’efficienza di ieri. Processi e organigrammi diventano intoccabili perché hanno funzionato, anche quando le condizioni che li giustificavano non esistono più.", "s": "Tempi di reazione lunghi di fronte agli shock esterni. Risorse che non si riescono a spostare verso le nuove opportunità. Un’azienda che impara lentamente e che, quando finalmente cambia, lo fa sotto pressione.", "d": "Individuare i due o tre processi che oggi sarebbe più difficile cambiare in fretta, e chiedersi perché. Spesso il vincolo non è tecnico, ma organizzativo.", "m": "L’adattabilità è una capacità progettata, non una reazione improvvisata."}, {"p": "Le idee e le competenze che servono non stanno tutte dentro l’azienda. L’innovazione aperta gestisce in modo intenzionale la conoscenza che entra ed esce: università, startup, fornitori, clienti. L’azienda smette di essere una fortezza che deve produrre ogni idea tra le proprie mura e diventa una rete che scambia di continuo con l’esterno.", "e": "La collaborazione viene vista come un rischio per la proprietà intellettuale, oppure ridotta a un acquisto di servizi. Ma comprare una consulenza non è co-creare: manca lo scambio nei due sensi.", "s": "Team che sviluppano da zero ciò che all’esterno esiste già. Time-to-market lunghi. Competenze e brevetti interni che restano in un cassetto invece di generare valore anche fuori.", "d": "Fare la mappa dei partner con cui l’azienda lavora oggi e chiedersi, per ciascuno, che cosa abbiamo imparato da loro nell’ultimo anno. Se la risposta è «niente», è solo fornitura.", "m": "L’ecosistema accelera ciò che l’organizzazione, da sola, tende a rallentare."}, {"p": "La conoscenza è un patrimonio dell’organizzazione: quella nella testa delle persone e quella scritta in dati e procedure. Gestirla significa raccoglierla, conservarla e metterla a disposizione di chi deve decidere, nel momento in cui serve.", "e": "Si dà per scontato che gli esperti restino per sempre, o che il sapere passi a voce da un collega all’altro. Così il know-how resta una proprietà personale invece di diventare un bene dell’azienda.", "s": "Quando una figura chiave se ne va o un progetto si chiude, la conoscenza se ne va con loro. I team risolvono problemi già risolti e ripetono errori già fatti: è la cosiddetta amnesia organizzativa.", "d": "Partire dalle informazioni che oggi si recuperano a forza di solleciti. In un servizio complesso che ho gestito, lo stato delle attività viveva nei file e nella memoria delle singole persone: portarlo su un sistema unico ha ridotto le rincorse e reso ogni informazione verificabile da tutti.", "m": "La conoscenza diventa vantaggio solo quando è memoria collettiva, non sapere individuale."}, {"p": "Misurare serve a capire se le iniziative stanno producendo valore e a correggere la rotta mentre si naviga. Nell’innovazione vale ancora di più, perché il percorso non è mai lineare.", "e": "Si applicano all’innovazione gli stessi indicatori dei processi stabili e si guarda solo il risultato finale. Ma nelle prime fasi il progresso si misura in ipotesi verificate e incertezze ridotte, non in fatturato.", "s": "Progetti senza prospettive che vanno avanti per inerzia, e progetti promettenti chiusi troppo presto. Lezioni che nessuno raccoglie. Decisioni prese su impressioni invece che su dati.", "d": "Affiancare agli indicatori di risultato, per ogni iniziativa, due o tre indicatori di apprendimento. Senza misure si naviga come una nave senza radar: si può solo sperare di evitare gli ostacoli.", "m": "Misurare bene non è controllo: è governo dell’apprendimento e della rotta."}, {"p": "Un’innovazione non è mai neutra. Ogni entità nuova o modificata produce effetti su persone, ambiente e società, e l’integrità chiede di considerarli fin dalla progettazione, non dopo.", "e": "Si valuta l’innovazione solo per redditività e vantaggio competitivo, e la responsabilità sociale finisce al marketing o alla comunicazione. L’etica diventa un costo da contenere invece che un criterio di progetto.", "s": "Soluzioni efficaci ma fragili, che producono effetti imprevisti: impatti ambientali, problemi di privacy, crisi di reputazione. Partner e investitori più diffidenti. Talenti che scelgono di lavorare altrove.", "d": "Aggiungere alle revisioni di progetto una domanda fissa: chi potrebbe essere danneggiato da questa soluzione, e che cosa possiamo cambiare adesso perché non accada? L’integrità funziona come un depuratore integrato nell’impianto, non aggiunto a valle.", "m": "L’integrità non è un vincolo a posteriori: è progettazione responsabile fin dall’inizio."}];
+  const dlg=document.getElementById('pdlg'),$=id=>document.getElementById(id);
+  const cards=[...document.querySelectorAll('.principle')];
+  let cur=0;
+  const show=i=>{
+    cur=(i+P.length)%P.length;const c=cards[cur],d=P[cur],nn=String(cur+1).padStart(2,'0');
+    $('pdlg-n').textContent='#'+nn;$('pdlg-title').textContent=c.querySelector('h3').textContent;
+    $('pdlg-p').textContent=d.p;$('pdlg-e').textContent=d.e;$('pdlg-s').textContent=d.s;$('pdlg-d').textContent=d.d;$('pdlg-m').textContent=d.m;$('pdlg-link').href='/innovagenda/'+nn+'/';
+    const fig=$('pdlg-fig'),img=$('pdlg-img');fig.hidden=true;
+    img.onload=()=>{fig.hidden=false};img.onerror=()=>{fig.hidden=true};
+    img.alt='Tavola a fumetti INNOVAGENDA #'+nn+': '+c.querySelector('h3').textContent;img.src='assets/innovagenda/'+nn+'.jpg';
+  };
+  let opener=null;
+  cards.forEach((c,i)=>c.addEventListener('click',()=>{opener=c;show(i);dlg.showModal()}));
+  dlg.addEventListener('close',()=>{if(opener)opener.focus()});
+  dlg.addEventListener('click',e=>{if(e.target===dlg||e.target.hasAttribute('data-close'))dlg.close();const st=e.target.getAttribute('data-step');if(st)show(cur+ +st)});
+  dlg.addEventListener('keydown',e=>{if(e.key==='ArrowRight')show(cur+1);if(e.key==='ArrowLeft')show(cur-1)});
+})();
+(()=>{
+  const cv=document.getElementById('art');if(!cv)return;
+  const ctx=cv.getContext('2d');
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const N=34, lines=[];
+  let r=7;const rnd=()=>(r=(r*16807)%2147483647)/2147483647;
+  for(let i=0;i<N;i++){
+    lines.push({f1:5+rnd()*9,f2:11+rnd()*14,p1:rnd()*6.28,p2:rnd()*6.28,s1:.25+rnd()*.35,s2:.15+rnd()*.3,
+      kind:i===Math.floor(N/2)?'o':(i%6===2?'t':'b'),off:rnd()});
+  }
+  let W=0,H=0,dpr=1;
+  const size=()=>{dpr=Math.min(devicePixelRatio||1,2);const b=cv.getBoundingClientRect();W=b.width;H=b.height;cv.width=W*dpr;cv.height=H*dpr;ctx.setTransform(dpr,0,0,dpr,0,0)};
+  const ss=(a,b,x)=>{const t=Math.max(0,Math.min(1,(x-a)/(b-a)));return t*t*(3-2*t)};
+  const yAt=(L,i,u,t)=>{
+    const band=H*.42, top=(H-band)/2, target=top+(i+.5)*band/N;
+    const A=H*.42*(1-ss(.08,.72,u));
+    const n=Math.sin(u*L.f1+L.p1+t*L.s1)*.6+Math.sin(u*L.f2+L.p2-t*L.s2)*.4;
+    return target+A*n;
+  };
+  const col={b:'245,242,236',t:'76,195,166',o:'240,145,63'};
+  const draw=t=>{
+    ctx.clearRect(0,0,W,H);
+    const steps=Math.max(80,Math.round(W/4));
+    lines.forEach((L,i)=>{
+      const g=ctx.createLinearGradient(0,0,W,0);
+      const a=L.kind==='b'?.22:L.kind==='t'?.75:1;
+      g.addColorStop(0,`rgba(${col[L.kind]},0)`);g.addColorStop(.18,`rgba(${col[L.kind]},${a*.6})`);g.addColorStop(.7,`rgba(${col[L.kind]},${a})`);g.addColorStop(1,`rgba(${col[L.kind]},${a})`);
+      ctx.strokeStyle=g;ctx.lineWidth=L.kind==='o'?2:L.kind==='t'?1.4:1;
+      ctx.beginPath();
+      for(let s=0;s<=steps;s++){const u=s/steps,x=u*W,y=yAt(L,i,u,t);s?ctx.lineTo(x,y):ctx.moveTo(x,y)}
+      ctx.stroke();
+      if(L.kind!=='b'){
+        const u=((t*.06+L.off)%1)*.85+.15,x=u*W,y=yAt(L,i,u,t);
+        const rg=ctx.createRadialGradient(x,y,0,x,y,14);
+        rg.addColorStop(0,`rgba(${col[L.kind]},.95)`);rg.addColorStop(1,`rgba(${col[L.kind]},0)`);
+        ctx.fillStyle=rg;ctx.beginPath();ctx.arc(x,y,14,0,6.283);ctx.fill();
+      }
+    });
+  };
+  let visible=true,t0=performance.now();
+  const loop=now=>{if(visible)draw((now-t0)/1000);requestAnimationFrame(loop)};
+  size();addEventListener('resize',()=>{size();if(reduce)draw(4)});
+  if(reduce){draw(4);return}
+  new IntersectionObserver(e=>visible=e[0].isIntersecting).observe(cv);
+  requestAnimationFrame(loop);
+})();
+(()=>{
+  const form=document.getElementById('form'),status=document.getElementById('form-status'),btn=form.querySelector('button[type=submit]');
+  const say=(msg,cls)=>{status.textContent=msg;status.className='form-status'+(cls?' '+cls:'')};
+  form.addEventListener('submit',async e=>{
+    e.preventDefault();
+    if(!form.checkValidity()){form.reportValidity();return}
+    if(form.action.includes('FORMSPREE_ID')){say('Il modulo non è ancora attivo. Riprova tra poco.','err');return}
+    btn.disabled=true;say('Invio in corso…');
+    try{
+      const r=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
+      if(r.ok){form.reset();say('Grazie! Ho ricevuto la tua richiesta e ti ricontatto per parlarne.','ok')}
+      else{say('Invio non riuscito. Riprova tra qualche minuto, oppure scrivimi su LinkedIn.','err')}
+    }catch(_){say('Invio non riuscito: controlla la connessione e riprova.','err')}
+    finally{btn.disabled=false}
+  });
+})();
+</script>
+</body>
+</html>
