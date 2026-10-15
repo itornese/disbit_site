@@ -1,0 +1,50 @@
+# DISBIT
+
+> DISBIT è lo studio di consulenza indipendente di Ilario Tornese, ingegnere gestionale e Innovation Manager certificato UNI 11814 (iscritto all'elenco MIMIT), con sede a Roma. Affianca aziende e fornitori di servizi nella governance di servizi, commesse e programmi complessi e nell'analisi, reingegnerizzazione e digitalizzazione dei processi operativi e logistici. Lavora in italiano e in inglese.
+
+DISBIT è anche il nome del metodo di lavoro: Discover, Invent, Simplify, Build IT. Prima si capisce il processo, poi lo si progetta e lo si semplifica; la tecnologia (IT) arriva per ultima. DISBIT è una ditta individuale (P.IVA IT17464071004), non una società. I clienti non vengono nominati per riservatezza e i risultati dei casi sono stime dichiarate come tali.
+
+## Pagine principali
+- [Home (italiano)](https://disbit.it/): proposta di valore, metodo DISBIT, aree di intervento, casi, profilo, contatti
+- [Home (English)](https://disbit.it/en/): versione inglese completa
+- [Contatti](https://disbit.it/#contatti): modulo per descrivere la propria esigenza; primo confronto senza impegno
+
+## Aree di intervento
+- Service & Program Governance: governance di servizi, commesse e programmi; project e program management; coordinamento di stakeholder e team; priorità, dipendenze, criticità e KPI; reporting e supporto alle decisioni
+- Operations & Industrial Digitalization: analisi e reingegnerizzazione dei processi; automazione e miglioramento operativo; tracciabilità con RFID, Industrial IoT e Computer Vision; integrazione dei sistemi e valorizzazione dei dati; fattibilità, business case e ROI
+
+## INNOVAGENDA: 12 principi per la gestione dell'innovazione
+Serie editoriale di Ilario Tornese ispirata alla serie ISO 56000. Ogni principio ha una pagina con spiegazione, errore più frequente, segnali per riconoscerlo, primo passo concreto e una tavola a fumetti.
+- [Indice INNOVAGENDA](https://disbit.it/innovagenda/)
+- [#01 Realizzazione del valore](https://disbit.it/innovagenda/01/)
+- [#02 Gestione dell'incertezza](https://disbit.it/innovagenda/02/)
+- [#03 Orientamento strategico](https://disbit.it/innovagenda/03/)
+- [#04 Approccio sistemico](https://disbit.it/innovagenda/04/)
+- [#05 Leadership orientata al futuro](https://disbit.it/innovagenda/05/)
+- [#06 Cultura dell'innovazione](https://disbit.it/innovagenda/06/)
+- [#07 Sfruttamento delle intuizioni](https://disbit.it/innovagenda/07/)
+- [#08 Adattabilità](https://disbit.it/innovagenda/08/)
+- [#09 Innovazione aperta](https://disbit.it/innovagenda/09/)
+- [#10 Gestione della conoscenza](https://disbit.it/innovagenda/10/)
+- [#11 Valutazione delle prestazioni](https://disbit.it/innovagenda/11/)
+- [#12 Integrità e responsabilità sociale](https://disbit.it/innovagenda/12/)
+
+## INNOVAGENDA (English)
+- [INNOVAGENDA index](https://disbit.it/en/innovagenda/)
+- [#01 Value realization](https://disbit.it/en/innovagenda/01/)
+- [#02 Managing uncertainty](https://disbit.it/en/innovagenda/02/)
+- [#03 Strategic direction](https://disbit.it/en/innovagenda/03/)
+- [#04 Systems approach](https://disbit.it/en/innovagenda/04/)
+- [#05 Future-focused leadership](https://disbit.it/en/innovagenda/05/)
+- [#06 Innovation culture](https://disbit.it/en/innovagenda/06/)
+- [#07 Exploiting insights](https://disbit.it/en/innovagenda/07/)
+- [#08 Adaptability](https://disbit.it/en/innovagenda/08/)
+- [#09 Open innovation](https://disbit.it/en/innovagenda/09/)
+- [#10 Knowledge management](https://disbit.it/en/innovagenda/10/)
+- [#11 Performance assessment](https://disbit.it/en/innovagenda/11/)
+- [#12 Integrity and social responsibility](https://disbit.it/en/innovagenda/12/)
+
+## Optional
+- [Privacy (italiano)](https://disbit.it/privacy.html)
+- [Privacy (English)](https://disbit.it/en/privacy.html)
+- [Profilo LinkedIn di Ilario Tornese](https://www.linkedin.com/in/ilario-tornese/)
