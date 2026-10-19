@@ -405,7 +405,11 @@ footer a{color:var(--hero-muted)}
 
   /* 1 · apertura: il messaggio in una schermata */
   .hero{padding:30px 0 26px}
-  .hero-art,.hero .intro,.hero .btn-ghost,.hero .who{display:none}
+  .hero .intro,.hero .btn-ghost,.hero .who{display:none}
+  /* animazione del computer, in trasparenza dietro il titolo */
+  .hero-art{display:block;position:absolute;left:0;right:0;top:20px;height:330px;min-height:0;margin:0;opacity:.3;pointer-events:none;z-index:0}
+  .hero-art canvas{left:0;width:100%}
+  .hero .wrap > div:first-child{position:relative;z-index:1}
   .hero h1{font-size:clamp(33px,9.6vw,40px)}
   .hero .m-intro{margin-top:14px;font-size:16.5px;line-height:1.5;color:var(--hero-muted)}
   .hero .m-intro b{color:var(--hero-ink)}
@@ -515,6 +519,12 @@ footer a{color:var(--hero-muted)}
   footer{padding-bottom:84px}
 }
 @media (max-width:767px) and (prefers-reduced-motion:reduce){.m-bar{transition:none}}
+
+/* modulo: solo l'email è obbligatoria */
+.form-req{margin:0;font-size:13px;color:var(--hero-muted)}
+label .req{font-weight:400;opacity:.85}
+.consent-note{margin:0;font-size:13px;line-height:1.45;color:var(--hero-muted)}
+.consent-note a{color:var(--hero-ink)}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://disbit.it/#website", "url": "https://disbit.it/", "name": "DISBIT", "alternateName": ["DISBIT · Ilario Tornese", "disbit.it"], "inLanguage": ["it", "en"], "publisher": {"@id": "https://disbit.it/#disbit"}}, {"@type": "ProfessionalService", "@id": "https://disbit.it/#disbit", "name": "DISBIT", "url": "https://disbit.it/", "logo": "https://disbit.it/assets/apple-touch-icon.png", "image": "https://disbit.it/assets/og-disbit.png", "description": "Governance di programmi complessi, reingegnerizzazione e digitalizzazione dei processi con il metodo DISBIT: Discover, Invent, Simplify, Build IT.", "slogan": "Processi più efficienti. Trasformazioni sotto controllo.", "vatID": "IT17464071004", "email": "info@disbit.it", "address": {"@type": "PostalAddress", "addressLocality": "Roma", "addressCountry": "IT"}, "areaServed": {"@type": "Country", "name": "Italia"}, "founder": {"@id": "https://disbit.it/#ilario"}, "sameAs": ["https://www.linkedin.com/in/ilario-tornese/"], "knowsAbout": ["Innovation management", "Digital transformation", "Program management", "Service governance", "Process reengineering", "Process automation", "RFID", "Industrial IoT", "Data analytics"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Servizi DISBIT", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Service & Program Governance", "description": "Governance di servizi, commesse e programmi complessi: project e program management, coordinamento di stakeholder e team, gestione di priorità, dipendenze, criticità e KPI, reporting e supporto alle decisioni.", "provider": {"@id": "https://disbit.it/#disbit"}}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Operations & Industrial Digitalization", "description": "Ottimizzazione dei processi logistici e produttivi con soluzioni tecnologiche (IoT, RFID, Computer Vision): automazione, tracciabilità, integrazione dei sistemi e valorizzazione dei dati, fattibilità, business case e ROI.", "provider": {"@id": "https://disbit.it/#disbit"}}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Process Reengineering", "description": "Analisi e reingegnerizzazione dei processi con il metodo DISBIT (Discover, Invent, Simplify, Build IT): la tecnologia arriva dopo la comprensione del problema.", "provider": {"@id": "https://disbit.it/#disbit"}}}]}, "identifier": {"@type": "PropertyValue", "propertyID": "Partita IVA", "value": "17464071004"}, "contactPoint": {"@type": "ContactPoint", "email": "info@disbit.it", "contactType": "informazioni commerciali", "availableLanguage": ["it", "en"]}}, {"@type": "Person", "@id": "https://disbit.it/#ilario", "name": "Ilario Tornese", "jobTitle": "Ingegnere gestionale · Innovation Manager", "url": "https://disbit.it/#chi-sono", "image": "https://disbit.it/assets/ilario-tornese-ritratto.jpg", "worksFor": {"@id": "https://disbit.it/#disbit"}, "sameAs": ["https://www.linkedin.com/in/ilario-tornese/"], "alumniOf": {"@type": "CollegeOrUniversity", "name": "Università di Roma Tor Vergata"}, "hasCredential": [{"@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Innovation Manager certificato UNI 11814", "recognizedBy": {"@type": "Organization", "name": "CEPAS (Bureau Veritas)"}}, {"@type": "EducationalOccupationalCredential", "credentialCategory": "license", "name": "Ingegnere iscritto all'Ordine degli Ingegneri di Roma, Sez. A, n. 32506", "recognizedBy": {"@type": "Organization", "name": "Ordine degli Ingegneri della Provincia di Roma"}, "identifier": {"@type": "PropertyValue", "propertyID": "Ordine degli Ingegneri della Provincia di Roma", "value": "32506"}}, {"@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "Laurea Specialistica in Ingegneria Gestionale"}]}, {"@type": "WebPage", "@id": "https://disbit.it/#webpage", "url": "https://disbit.it/", "inLanguage": "it", "name": "DISBIT | Process Innovation &amp; Program Governance", "about": {"@id": "https://disbit.it/#disbit"}, "isPartOf": {"@id": "https://disbit.it/#website"}}]}</script>
 </head>
@@ -797,20 +807,20 @@ footer a{color:var(--hero-muted)}
     </div>
     <form id="form" action="https://formspree.io/f/xwlvnrqv" method="POST" novalidate>
       <input type="hidden" name="_subject" value="Nuova richiesta dal sito DISBIT">
+      <p class="form-req">Solo l'email è obbligatoria: tutto il resto è facoltativo.</p>
       <label class="hp" aria-hidden="true">Non compilare<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
-      <label for="f-nome">Nome e cognome<input id="f-nome" name="nome" required autocomplete="name"></label>
-      <label for="f-azienda">Azienda<input id="f-azienda" name="azienda" autocomplete="organization"></label>
-      <label for="f-email">Email<input id="f-email" name="email" type="email" required autocomplete="email"></label>
+      <label for="f-nome">Nome e cognome<input id="f-nome" name="nome" autocomplete="name"></label>
+      <label for="f-email"><span>Email <small class="req">(obbligatoria)</small></span><input id="f-email" name="email" type="email" required autocomplete="email"></label>
       <fieldset class="scope">
-        <legend>Di che ambito si tratta? <small>(facoltativo)</small></legend>
+        <legend>Di che ambito si tratta?</legend>
         <div class="pills">
           <label class="pill"><input type="radio" name="ambito" value="Governance di servizi o programmi complessi"><span>Governance di servizi o programmi complessi</span></label>
           <label class="pill"><input type="radio" name="ambito" value="Digitalizzazione o ottimizzazione dei processi"><span>Digitalizzazione o ottimizzazione dei processi</span></label>
           <label class="pill"><input type="radio" name="ambito" value="Entrambi / Da valutare insieme"><span>Entrambi / Da valutare insieme</span></label>
         </div>
       </fieldset>
-      <label for="f-processo">Di cosa si tratta?<textarea id="f-processo" name="processo" required placeholder="Descrivi in breve l'obiettivo o la criticità principale…"></textarea></label>
-      <label for="f-privacy" class="consent"><input type="checkbox" id="f-privacy" name="privacy" value="accettata" required><span>Ho letto l'<a href="privacy.html" target="_blank" rel="noopener">informativa privacy</a>, e so come vengono trattati i dati che invio.</span></label>
+      <label for="f-processo">Di cosa si tratta?<textarea id="f-processo" name="processo" placeholder="Descrivi in breve l'obiettivo o la criticità principale…"></textarea></label>
+      <p class="consent-note">Inviando la richiesta confermi di aver letto l'<a href="privacy.html" target="_blank" rel="noopener">informativa privacy</a>.</p>
       <button class="btn btn-primary" type="submit">Invia la richiesta →</button>
       <p class="form-note">Ti ricontatto al più presto per un primo confronto di 30 minuti, senza impegno, per inquadrare priorità e fattibilità.</p>
       <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
@@ -935,7 +945,7 @@ const ta=document.getElementById('f-processo'),tgl=[];
  b.textContent=(lab?el.querySelector(lab):el).firstChild.textContent.trim();
  el.classList.add('m-fhide');el.before(b);tgl.push(el);
  b.addEventListener('click',()=>{const open=el.classList.toggle('m-fhide')===false;b.setAttribute('aria-expanded',open);sync();if(open)(el.querySelector('textarea,input')||el).focus()})});
-const sync=()=>{if(ta)ta.required=!(mq.matches&&ta.closest('label').classList.contains('m-fhide'))};sync();mq.addEventListener('change',sync);
+const sync=()=>{};
 const url=location.origin+location.pathname;
 document.querySelectorAll('[data-share]').forEach(b=>b.addEventListener('click',async()=>{
  if(navigator.share){try{await navigator.share({title:T.title,url});return}catch(e){if(e.name==='AbortError')return}}

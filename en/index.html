@@ -406,7 +406,11 @@ footer a{color:var(--hero-muted)}
 
   /* 1 · apertura: il messaggio in una schermata */
   .hero{padding:30px 0 26px}
-  .hero-art,.hero .intro,.hero .btn-ghost,.hero .who{display:none}
+  .hero .intro,.hero .btn-ghost,.hero .who{display:none}
+  /* animazione del computer, in trasparenza dietro il titolo */
+  .hero-art{display:block;position:absolute;left:0;right:0;top:20px;height:330px;min-height:0;margin:0;opacity:.3;pointer-events:none;z-index:0}
+  .hero-art canvas{left:0;width:100%}
+  .hero .wrap > div:first-child{position:relative;z-index:1}
   .hero h1{font-size:clamp(33px,9.6vw,40px)}
   .hero .m-intro{margin-top:14px;font-size:16.5px;line-height:1.5;color:var(--hero-muted)}
   .hero .m-intro b{color:var(--hero-ink)}
@@ -516,6 +520,12 @@ footer a{color:var(--hero-muted)}
   footer{padding-bottom:84px}
 }
 @media (max-width:767px) and (prefers-reduced-motion:reduce){.m-bar{transition:none}}
+
+/* modulo: solo l'email è obbligatoria */
+.form-req{margin:0;font-size:13px;color:var(--hero-muted)}
+label .req{font-weight:400;opacity:.85}
+.consent-note{margin:0;font-size:13px;line-height:1.45;color:var(--hero-muted)}
+.consent-note a{color:var(--hero-ink)}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://disbit.it/#website", "url": "https://disbit.it/", "name": "DISBIT", "alternateName": ["DISBIT · Ilario Tornese", "disbit.it"], "inLanguage": ["it", "en"], "publisher": {"@id": "https://disbit.it/#disbit"}}, {"@type": "ProfessionalService", "@id": "https://disbit.it/#disbit", "name": "DISBIT", "url": "https://disbit.it/en/", "logo": "https://disbit.it/assets/apple-touch-icon.png", "image": "https://disbit.it/assets/og-disbit-en.png", "description": "Governance of complex programs, process re-engineering and digitalization with the DISBIT method: Discover, Invent, Simplify, Build IT.", "slogan": "More efficient processes. Transformations under control.", "vatID": "IT17464071004", "email": "info@disbit.it", "address": {"@type": "PostalAddress", "addressLocality": "Rome", "addressCountry": "IT"}, "areaServed": {"@type": "Country", "name": "Italy"}, "founder": {"@id": "https://disbit.it/#ilario"}, "sameAs": ["https://www.linkedin.com/in/ilario-tornese/"], "knowsAbout": ["Innovation management", "Digital transformation", "Program management", "Service governance", "Process reengineering", "Process automation", "RFID", "Industrial IoT", "Data analytics"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "DISBIT services", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Service & Program Governance", "description": "Governance of complex services, contracts and programs: project and program management, coordination of stakeholders and teams, management of priorities, dependencies, issues and KPIs, reporting and decision support.", "provider": {"@id": "https://disbit.it/#disbit"}}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Operations & Industrial Digitalization", "description": "Optimization of logistics and production processes with technology solutions (IoT, RFID, Computer Vision): automation, traceability, systems integration and data, feasibility, business case and ROI.", "provider": {"@id": "https://disbit.it/#disbit"}}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Process Reengineering", "description": "Process analysis and re-engineering with the DISBIT method (Discover, Invent, Simplify, Build IT): technology comes after the problem is understood.", "provider": {"@id": "https://disbit.it/#disbit"}}}]}, "identifier": {"@type": "PropertyValue", "propertyID": "VAT number", "value": "17464071004"}, "contactPoint": {"@type": "ContactPoint", "email": "info@disbit.it", "contactType": "sales inquiries", "availableLanguage": ["it", "en"]}}, {"@type": "Person", "@id": "https://disbit.it/#ilario", "name": "Ilario Tornese", "jobTitle": "Industrial Engineer · Innovation Manager", "url": "https://disbit.it/en/#chi-sono", "image": "https://disbit.it/assets/ilario-tornese-ritratto.jpg", "worksFor": {"@id": "https://disbit.it/#disbit"}, "sameAs": ["https://www.linkedin.com/in/ilario-tornese/"], "alumniOf": {"@type": "CollegeOrUniversity", "name": "University of Rome Tor Vergata"}, "hasCredential": [{"@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Certified Innovation Manager (UNI 11814)", "recognizedBy": {"@type": "Organization", "name": "CEPAS (Bureau Veritas)"}}, {"@type": "EducationalOccupationalCredential", "credentialCategory": "license", "name": "Registered engineer, Order of Engineers of Rome, Section A, no. 32506", "recognizedBy": {"@type": "Organization", "name": "Ordine degli Ingegneri della Provincia di Roma"}, "identifier": {"@type": "PropertyValue", "propertyID": "Ordine degli Ingegneri della Provincia di Roma", "value": "32506"}}, {"@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "Master's degree in Industrial Engineering"}]}, {"@type": "WebPage", "@id": "https://disbit.it/en/#webpage", "url": "https://disbit.it/en/", "inLanguage": "en", "name": "DISBIT | Process Innovation &amp; Program Governance", "about": {"@id": "https://disbit.it/#disbit"}, "isPartOf": {"@id": "https://disbit.it/#website"}}]}</script>
 </head>
@@ -798,20 +808,20 @@ footer a{color:var(--hero-muted)}
     </div>
     <form id="form" action="https://formspree.io/f/xwlvnrqv" method="POST" novalidate>
       <input type="hidden" name="_subject" value="Nuova richiesta dal sito DISBIT (EN)">
+      <p class="form-req">Only your email is required; everything else is optional.</p>
       <label class="hp" aria-hidden="true">Do not fill in<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
-      <label for="f-nome">Full name<input id="f-nome" name="nome" required autocomplete="name"></label>
-      <label for="f-azienda">Company<input id="f-azienda" name="azienda" autocomplete="organization"></label>
-      <label for="f-email">Email<input id="f-email" name="email" type="email" required autocomplete="email"></label>
+      <label for="f-nome">Full name<input id="f-nome" name="nome" autocomplete="name"></label>
+      <label for="f-email"><span>Email <small class="req">(required)</small></span><input id="f-email" name="email" type="email" required autocomplete="email"></label>
       <fieldset class="scope">
-        <legend>What area is it? <small>(optional)</small></legend>
+        <legend>What area is it?</legend>
         <div class="pills">
           <label class="pill"><input type="radio" name="ambito" value="Complex service or program governance"><span>Complex service or program governance</span></label>
           <label class="pill"><input type="radio" name="ambito" value="Process digitalization or optimization"><span>Process digitalization or optimization</span></label>
           <label class="pill"><input type="radio" name="ambito" value="Both / To be evaluated together"><span>Both / To be evaluated together</span></label>
         </div>
       </fieldset>
-      <label for="f-processo">What is it about?<textarea id="f-processo" name="processo" required placeholder="Briefly describe the main goal or challenge…"></textarea></label>
-      <label for="f-privacy" class="consent"><input type="checkbox" id="f-privacy" name="privacy" value="accettata" required><span>I have read the <a href="/en/privacy.html" target="_blank" rel="noopener">privacy notice</a> and understand how the data I send is processed.</span></label>
+      <label for="f-processo">What is it about?<textarea id="f-processo" name="processo" placeholder="Briefly describe the main goal or challenge…"></textarea></label>
+      <p class="consent-note">By sending this request you confirm you have read the <a href="/en/privacy.html" target="_blank" rel="noopener">privacy notice</a>.</p>
       <button class="btn btn-primary" type="submit">Send request →</button>
       <p class="form-note">I will get back to you as soon as possible for a 30-minute no-obligation introductory call to frame priorities and feasibility.</p>
       <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
@@ -936,7 +946,7 @@ const ta=document.getElementById('f-processo'),tgl=[];
  b.textContent=(lab?el.querySelector(lab):el).firstChild.textContent.trim();
  el.classList.add('m-fhide');el.before(b);tgl.push(el);
  b.addEventListener('click',()=>{const open=el.classList.toggle('m-fhide')===false;b.setAttribute('aria-expanded',open);sync();if(open)(el.querySelector('textarea,input')||el).focus()})});
-const sync=()=>{if(ta)ta.required=!(mq.matches&&ta.closest('label').classList.contains('m-fhide'))};sync();mq.addEventListener('change',sync);
+const sync=()=>{};
 const url=location.origin+location.pathname;
 document.querySelectorAll('[data-share]').forEach(b=>b.addEventListener('click',async()=>{
  if(navigator.share){try{await navigator.share({title:T.title,url});return}catch(e){if(e.name==='AbortError')return}}
