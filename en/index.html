@@ -400,7 +400,7 @@ footer a{color:var(--hero-muted)}
   .m-more::after{content:"+";font-size:18px;line-height:1}
   .m-open .m-more::after{content:"–"}
   .m-swipe{margin-top:10px;font-size:13px;color:var(--muted)}
-  .m-rail{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:12px -16px 0;padding:0 16px 8px;scrollbar-width:none;list-style:none}
+  .m-rail{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:16px;gap:12px;margin:12px -16px 0;padding:0 16px 8px;scrollbar-width:none;list-style:none}
   .m-rail::-webkit-scrollbar{display:none}
   .m-rail > *{flex:0 0 80%;scroll-snap-align:start}
 
@@ -418,11 +418,11 @@ footer a{color:var(--hero-muted)}
   .m-acr b{color:#f0913f;font-weight:800}
   .hero .cta-row{margin:22px 0 10px}
   .hero .cta-row .btn{flex:1 1 100%;justify-content:center;text-align:center}
-  .m-share{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;background:none;border:1px solid #ffffff2e;color:var(--hero-ink);border-radius:999px;padding:10px 16px;font:inherit;font-size:15px;font-weight:600;cursor:pointer;min-height:48px}
+  .m-share{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;background:none;border:0;color:var(--hero-muted);padding:8px 16px;font:inherit;font-size:14.5px;font-weight:600;cursor:pointer;min-height:44px;text-decoration:underline;text-decoration-color:#ffffff40;text-underline-offset:4px}
   .m-share svg{flex:none}
-  .proof .pf{padding:12px 10px}
-  .proof .pf b{font-size:17px}
-  .proof .pf span{font-size:12px;line-height:1.35}
+  .proof .pf{padding:10px 10px}
+  .proof .pf b{font-size:16px}
+  .proof .pf span{font-size:13px;line-height:1.3}
 
   /* 2 · ti riconosci: tre righe */
   .signals{display:block;margin-top:16px}
@@ -434,7 +434,8 @@ footer a{color:var(--hero-muted)}
   /* 3 · percorso: cinque righe */
   #come .lead,.gov{display:none}
   .path{display:block;margin-top:16px}
-  .phase{display:grid;grid-template-columns:auto 1fr auto;column-gap:12px;align-items:center;padding:10px 14px;margin-bottom:6px}
+  .phase{display:grid;grid-template-columns:auto 1fr auto;column-gap:12px;align-items:center;padding:10px 14px;margin-bottom:6px;cursor:pointer}
+  .m-tap{cursor:pointer;-webkit-tap-highlight-color:transparent}
   .phase h3.word{margin:0;font-size:19px;line-height:1.1;grid-column:1;grid-row:1}
   .phase .what{margin:0;font-size:13px;line-height:1.3;grid-column:2;grid-row:1;align-self:center}
   .phase .m-more{grid-column:3;grid-row:1;margin:0;font-size:0;color:#f0913f;min-width:40px;justify-content:flex-end}
@@ -449,35 +450,43 @@ footer a{color:var(--hero-muted)}
   .area{padding:18px 18px 10px}
   .area h3{font-size:19px;margin-top:6px}
   .area .num{font-size:11px}
+  .area > p:not(.engage){font-size:15px;margin-top:8px}
+  .area:not(.m-open) > p:not(.engage){display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 
   /* 5 · risultati: carosello di numeri */
   #risultati .sec-note,.cta-band{display:none}
-  .crows.m-rail > .crow{display:flex;flex-direction:column;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:0}
+  .crows.m-rail{border-top:0}
+  .crows.m-rail > .crow{display:flex;flex-direction:column;gap:6px;background:color-mix(in srgb,var(--card),var(--ink) 6%);border:1px solid var(--line);border-radius:12px;padding:16px;margin:0;text-align:left;align-items:flex-start}
   .crow .cnum{order:-1;display:block;text-align:left}
   .crow .cnum b{font-size:32px}
   .crow .cnum span{margin-top:2px}
   .cbody h3{font-size:16px;margin:0}
   .cbody p{font-size:14px}
-  .cases-note{margin-top:8px;font-size:12px}
+  .cases-note{margin-top:8px;font-size:13px}
+  .m-dots{display:flex;justify-content:center;gap:8px;margin-top:10px}
+  .m-dots i{width:7px;height:7px;border-radius:50%;background:var(--line);transition:background .2s,width .2s}
+  .m-dots i.on{background:var(--orange);width:18px;border-radius:4px}
 
   /* 6 · chi sono: foto e nome */
-  #chi-sono .about{display:grid;grid-template-columns:84px 1fr;gap:4px 16px;align-items:center}
-  #chi-sono .about-side{display:contents}
-  #chi-sono .about img{grid-column:1;grid-row:1;width:84px;max-width:84px;box-shadow:none}
-  #chi-sono .body{grid-column:2;grid-row:1}
-  #chi-sono .creds{grid-column:1/-1;grid-row:2;margin-top:14px}
-  #chi-sono .body .eyebrow{margin-bottom:4px}
-  #chi-sono .section-title{font-size:24px;margin:0}
-  #chi-sono .role{font-size:13.5px;margin-top:2px}
-  #chi-sono .body .m-fold:first-of-type{margin-top:10px}
-  #chi-sono.m-open-body .body{grid-column:1/-1;grid-row:2;margin-top:12px}
-  #chi-sono.m-open .creds{grid-row:3}
+  #chi-sono{background:var(--paper);border-top:0;border-bottom:0}
+  #chi-sono .about{display:grid;grid-template-columns:76px 1fr;gap:0 16px;align-items:center}
+  #chi-sono .about-side,#chi-sono .body{display:contents}
+  #chi-sono .about > * ,#chi-sono .about-side > *,#chi-sono .body > *{grid-column:1/-1}
+  #chi-sono .body .eyebrow{grid-row:1;margin-bottom:14px}
+  #chi-sono .about img{grid-column:1;grid-row:2 / span 2;width:76px;max-width:76px;box-shadow:none;justify-self:start}
+  #chi-sono .section-title{grid-column:2;grid-row:2;align-self:end;font-size:24px;margin:0}
+  #chi-sono .role{grid-column:2;grid-row:3;align-self:start;font-size:13.5px;margin-top:2px}
+  #chi-sono .creds{margin-top:16px}
+  #chi-sono .m-more{justify-self:start;margin-top:10px}
+  #chi-sono .body .lead{margin-top:16px}
 
-  /* 7 · innovagenda: solo il carosello */
+  /* 7 · innovagenda: solo il carosello (fondo alternato rispetto a Chi sono) */
+  #innovagenda{background:var(--card);border-top:1px solid var(--line)}
+  #innovagenda .principle{background:color-mix(in srgb,var(--card),var(--ink) 6%)}
   #innovagenda .eyebrow,#innovagenda .definition,#innovagenda .def-src,#innovagenda .lead,#innovagenda .closing{display:none}
   .innovagenda-head{margin-top:0;display:block}
   .innovagenda-head p{font-size:14.5px;margin-top:6px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-  .principles{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:12px -16px 0;padding:0 16px 8px;scrollbar-width:none}
+  .principles{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:16px;gap:12px;margin:12px -16px 0;padding:0 16px 8px;scrollbar-width:none}
   .principles::-webkit-scrollbar{display:none}
   .principle,.principle.extra{display:flex;flex:0 0 72%;scroll-snap-align:start;padding:14px 14px 16px}
   .principle p{font-size:13.5px}
@@ -811,7 +820,7 @@ footer a{color:var(--hero-muted)}
 </section>
 </main>
 
-<div class="m-bar" aria-hidden="true"><a href="#contatti" tabindex="-1">Let’s talk</a><button type="button" data-share tabindex="-1" aria-label="Send the link to your computer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg></button></div>
+<div class="m-bar" aria-hidden="true"><a href="#contatti" tabindex="-1">Let’s talk →</a></div>
 
 <footer>
   <div class="wrap"><span class="foot-brand"><img src="/assets/disbit-logo-light.svg?v=2" alt="DISBIT" width="92" height="14"></span><span>DISBIT by Ilario Tornese · VAT IT17464071004</span><span><a href="/en/privacy.html">Privacy</a> · © 2026</span></div>
@@ -904,14 +913,23 @@ footer a{color:var(--hero-muted)}
 </script>
 <script>
 /* versione telefono: dettagli apribili, caroselli, barra fissa, invio del link */
-(()=>{const mq=matchMedia('(max-width:767px)'),T={more:'Details',less:'Close',title:'DISBIT · Process Innovation & Program Governance',mail:'To read later on my computer: '};
+(()=>{const mq=matchMedia('(max-width:767px)'),T={more:'Details',less:'Close',area:'Learn more',kase:'Read the case',title:'DISBIT · Process Innovation & Program Governance',mail:'To read later on my computer: '};
 document.querySelector('.crows')?.classList.add('m-rail');
-const folds=[['.phase','p,.out'],['.area','p,ul,.chips'],['.crow','.cbody p'],['#chi-sono','.creds,.body .lead,.role-p,.story-title,.story-title ~ p']];
-folds.forEach(([h,f])=>document.querySelectorAll(h).forEach(el=>{
+const folds=[['.phase','p,.out',T.more,1],['.area','ul,.engage,.chips',T.area,0],['.crow','.cbody p',T.kase,1],['#chi-sono','.creds,.role-p,.story-title,.story-title ~ p',T.more,0]];
+folds.forEach(([h,f,lab,tap])=>document.querySelectorAll(h).forEach(el=>{
  el.classList.add('m-fold-host');const fs=[...el.querySelectorAll(f)];fs.forEach(x=>x.classList.add('m-fold'));
- const b=document.createElement('button');b.type='button';b.className='m-more';b.textContent=T.more;b.setAttribute('aria-expanded','false');
- b.addEventListener('click',()=>{const o=el.classList.toggle('m-open');el.classList.toggle('m-open-body',o);b.setAttribute('aria-expanded',o);b.textContent=o?T.less:T.more});
+ const b=document.createElement('button');b.type='button';b.className='m-more';b.textContent=lab;b.setAttribute('aria-expanded','false');
+ const name=el.querySelector('h3');if(h=='.phase'&&name)b.setAttribute('aria-label',lab+': '+name.textContent);
+ b.addEventListener('click',e=>{e.stopPropagation();const o=el.classList.toggle('m-open');b.setAttribute('aria-expanded',o);b.textContent=o?T.less:lab;if(h=='.phase'&&name)b.setAttribute('aria-label',(o?T.less:lab)+': '+name.textContent)});
+ /* tutta la riga o la card si apre al tocco, non solo il pulsante */
+ if(tap){el.classList.add('m-tap');el.addEventListener('click',e=>{if(mq.matches&&!e.target.closest('a,button,input,textarea,label')&&!getSelection().toString())b.click()})}
  if(h=='.crow')el.querySelector('.cbody').appendChild(b);else if(h=='#chi-sono')el.querySelector('.body').appendChild(b);else if(fs.length)fs[fs.length-1].after(b);else el.appendChild(b)}));
+/* indicatori di posizione sotto i caroselli */
+[document.querySelector('.crows'),document.querySelector('.principles')].forEach(r=>{if(!r)return;
+ const items=[...r.children],d=document.createElement('div');d.className='m-only m-dots';d.setAttribute('aria-hidden','true');
+ items.forEach(()=>d.appendChild(document.createElement('i')));r.after(d);
+ const set=()=>{const w=items[0].getBoundingClientRect().width+12,i=Math.min(items.length-1,Math.round(r.scrollLeft/w));[...d.children].forEach((x,k)=>x.classList.toggle('on',k===i))};
+ r.addEventListener('scroll',set,{passive:true});set()});
 const ta=document.getElementById('f-processo'),tgl=[];
 [[document.querySelector('form .scope'),'legend'],[ta&&ta.closest('label'),null]].forEach(([el,lab])=>{if(!el)return;
  const b=document.createElement('button');b.type='button';b.className='m-ftoggle';b.setAttribute('aria-expanded','false');
