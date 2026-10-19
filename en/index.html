@@ -388,6 +388,119 @@ footer{background:var(--hero-bg);color:var(--hero-muted);font-size:13px;border-t
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 footer a{color:var(--hero-muted)}
 @media (max-width:600px){section{padding:72px 0}.wrap{padding:0 16px}}
+
+/* ===== VERSIONE TELEFONO (solo schermi fino a 767px) ===== */
+.m-only,.m-bar,.m-more,.m-share,.m-ftoggle{display:none}
+@media (max-width:767px){
+  .m-only{display:block}
+  section{padding:40px 0}
+  .section-title{font-size:clamp(24px,7vw,30px)}
+  .m-fold-host:not(.m-open) .m-fold{display:none!important}
+  .m-more{display:inline-flex;align-items:center;gap:6px;margin-top:8px;background:none;border:0;padding:4px 0;font:inherit;font-size:14px;font-weight:700;color:var(--orange-ink);cursor:pointer;min-height:40px}
+  .m-more::after{content:"+";font-size:18px;line-height:1}
+  .m-open .m-more::after{content:"–"}
+  .m-swipe{margin-top:10px;font-size:13px;color:var(--muted)}
+  .m-rail{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:12px -16px 0;padding:0 16px 8px;scrollbar-width:none;list-style:none}
+  .m-rail::-webkit-scrollbar{display:none}
+  .m-rail > *{flex:0 0 80%;scroll-snap-align:start}
+
+  /* 1 · apertura: il messaggio in una schermata */
+  .hero{padding:30px 0 26px}
+  .hero-art,.hero .intro,.hero .btn-ghost,.hero .who{display:none}
+  .hero h1{font-size:clamp(33px,9.6vw,40px)}
+  .hero .m-intro{margin-top:14px;font-size:16.5px;line-height:1.5;color:var(--hero-muted)}
+  .hero .m-intro b{color:var(--hero-ink)}
+  .hero .cta-row{margin:22px 0 10px}
+  .hero .cta-row .btn{flex:1 1 100%;justify-content:center;text-align:center}
+  .m-share{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;background:none;border:1px solid #ffffff2e;color:var(--hero-ink);border-radius:999px;padding:10px 16px;font:inherit;font-size:15px;font-weight:600;cursor:pointer;min-height:48px}
+  .m-share svg{flex:none}
+  .proof .pf{padding:12px 10px}
+  .proof .pf b{font-size:17px}
+  .proof .pf span{font-size:12px;line-height:1.35}
+
+  /* 2 · ti riconosci: tre righe */
+  .signals{display:block;margin-top:16px}
+  .signal{background:none;border:0;border-radius:0;padding:0 0 0 30px;margin-bottom:12px;font-size:15.5px}
+  .signal::before{left:0;top:3px;width:16px;height:16px}.signal::after{left:6px;top:9px}
+  .signal:nth-child(n+4){display:none}
+  .signals-foot{font-size:16px;margin-top:16px}
+
+  /* 3 · percorso: cinque righe */
+  #come .lead,.gov{display:none}
+  .path{display:block;margin-top:16px}
+  .phase{display:grid;grid-template-columns:auto 1fr auto;column-gap:12px;align-items:center;padding:10px 14px;margin-bottom:6px}
+  .phase h3.word{margin:0;font-size:19px;line-height:1.1;grid-column:1;grid-row:1}
+  .phase .what{margin:0;font-size:13px;line-height:1.3;grid-column:2;grid-row:1;align-self:center}
+  .phase .m-more{grid-column:3;grid-row:1;margin:0;font-size:0;color:#f0913f;min-width:40px;justify-content:flex-end}
+  .phase .m-more::after{font-size:22px}
+  .phase .m-fold{grid-column:1/-1}
+  .phase p{margin-top:8px;font-size:14.5px}
+  .phase .out{margin-top:10px;padding-top:10px}
+
+  /* 4 · con chi lavoro: due schede chiuse */
+  #con-chi .lead{display:none}
+  .areas{gap:10px;margin-top:16px}
+  .area{padding:18px 18px 10px}
+  .area h3{font-size:19px;margin-top:6px}
+  .area .num{font-size:11px}
+
+  /* 5 · risultati: carosello di numeri */
+  #risultati .sec-note,.cta-band{display:none}
+  .crows.m-rail > .crow{display:flex;flex-direction:column;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:0}
+  .crow .cnum{order:-1;display:block;text-align:left}
+  .crow .cnum b{font-size:32px}
+  .crow .cnum span{margin-top:2px}
+  .cbody h3{font-size:16px;margin:0}
+  .cbody p{font-size:14px}
+  .cases-note{margin-top:8px;font-size:12px}
+
+  /* 6 · chi sono: foto e nome */
+  #chi-sono .about{display:grid;grid-template-columns:84px 1fr;gap:4px 16px;align-items:center}
+  #chi-sono .about-side{display:contents}
+  #chi-sono .about img{grid-column:1;grid-row:1;width:84px;max-width:84px;box-shadow:none}
+  #chi-sono .body{grid-column:2;grid-row:1}
+  #chi-sono .creds{grid-column:1/-1;grid-row:2;margin-top:14px}
+  #chi-sono .body .eyebrow{margin-bottom:4px}
+  #chi-sono .section-title{font-size:24px;margin:0}
+  #chi-sono .role{font-size:13.5px;margin-top:2px}
+  #chi-sono .body .m-fold:first-of-type{margin-top:10px}
+  #chi-sono.m-open-body .body{grid-column:1/-1;grid-row:2;margin-top:12px}
+  #chi-sono.m-open .creds{grid-row:3}
+
+  /* 7 · innovagenda: solo il carosello */
+  #innovagenda .eyebrow,#innovagenda .definition,#innovagenda .def-src,#innovagenda .lead,#innovagenda .closing{display:none}
+  .innovagenda-head{margin-top:0;display:block}
+  .innovagenda-head p{font-size:14.5px;margin-top:6px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .principles{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:12px -16px 0;padding:0 16px 8px;scrollbar-width:none}
+  .principles::-webkit-scrollbar{display:none}
+  .principle,.principle.extra{display:flex;flex:0 0 72%;scroll-snap-align:start;padding:14px 14px 16px}
+  .principle p{font-size:13.5px}
+  #innovagenda .btn-outline{margin-top:12px}
+
+  /* 8 · contatti */
+  .contact .steps,.contact .lead{display:none}
+  .contact .wrap{gap:20px}
+  form{padding:18px}
+  .pills{gap:6px}
+  .pill span{font-size:13px;padding:7px 12px}
+  form textarea{min-height:96px}
+  .contact label[for="f-azienda"]{display:none}
+  .m-fhide{display:none!important}
+  .m-ftoggle{display:flex;align-items:center;justify-content:space-between;width:100%;background:none;border:1px dashed #ffffff33;border-radius:12px;padding:12px 14px;font:inherit;font-size:14px;font-weight:600;color:var(--hero-ink);text-align:left;cursor:pointer;min-height:48px}
+  .m-ftoggle small{font-weight:400;opacity:.75}
+  .m-ftoggle::after{content:"+";font-size:20px;line-height:1;color:#f0913f;margin-left:12px}
+  .m-ftoggle[aria-expanded="true"]::after{content:"–"}
+  .contact .scope legend{display:none}
+  .contact label[for="f-processo"]{font-size:0;gap:0}
+
+  /* barra fissa in basso */
+  .m-bar{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:color-mix(in srgb,#0e0c17 94%,transparent);backdrop-filter:blur(8px);border-top:1px solid #ffffff1a;transform:translateY(110%);transition:transform .25s ease}
+  .m-bar.show{transform:none}
+  .m-bar a{flex:1;display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:999px;background:#f0913f;color:#1d1830;font-weight:700;text-decoration:none}
+  .m-bar button{flex:none;width:48px;height:48px;border-radius:50%;border:1px solid #ffffff2e;background:none;color:#f5f2ec;display:flex;align-items:center;justify-content:center;cursor:pointer}
+  footer{padding-bottom:84px}
+}
+@media (max-width:767px) and (prefers-reduced-motion:reduce){.m-bar{transition:none}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://disbit.it/#website", "url": "https://disbit.it/", "name": "DISBIT", "alternateName": ["DISBIT · Ilario Tornese", "disbit.it"], "inLanguage": ["it", "en"], "publisher": {"@id": "https://disbit.it/#disbit"}}, {"@type": "ProfessionalService", "@id": "https://disbit.it/#disbit", "name": "DISBIT", "url": "https://disbit.it/en/", "logo": "https://disbit.it/assets/apple-touch-icon.png", "image": "https://disbit.it/assets/og-disbit-en.png", "description": "Governance of complex programs, process re-engineering and digitalization with the DISBIT method: Discover, Invent, Simplify, Build IT.", "slogan": "More efficient processes. Transformations under control.", "vatID": "IT17464071004", "email": "info@disbit.it", "address": {"@type": "PostalAddress", "addressLocality": "Rome", "addressCountry": "IT"}, "areaServed": {"@type": "Country", "name": "Italy"}, "founder": {"@id": "https://disbit.it/#ilario"}, "sameAs": ["https://www.linkedin.com/in/ilario-tornese/"], "knowsAbout": ["Innovation management", "Digital transformation", "Program management", "Service governance", "Process reengineering", "Process automation", "RFID", "Industrial IoT", "Data analytics"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "DISBIT services", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Service & Program Governance", "description": "Governance of complex services, contracts and programs: project and program management, coordination of stakeholders and teams, management of priorities, dependencies, issues and KPIs, reporting and decision support.", "provider": {"@id": "https://disbit.it/#disbit"}}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Operations & Industrial Digitalization", "description": "Optimization of logistics and production processes with technology solutions (IoT, RFID, Computer Vision): automation, traceability, systems integration and data, feasibility, business case and ROI.", "provider": {"@id": "https://disbit.it/#disbit"}}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Process Reengineering", "description": "Process analysis and re-engineering with the DISBIT method (Discover, Invent, Simplify, Build IT): technology comes after the problem is understood.", "provider": {"@id": "https://disbit.it/#disbit"}}}]}, "identifier": {"@type": "PropertyValue", "propertyID": "VAT number", "value": "17464071004"}, "contactPoint": {"@type": "ContactPoint", "email": "info@disbit.it", "contactType": "sales inquiries", "availableLanguage": ["it", "en"]}}, {"@type": "Person", "@id": "https://disbit.it/#ilario", "name": "Ilario Tornese", "jobTitle": "Industrial Engineer · Innovation Manager", "url": "https://disbit.it/en/#chi-sono", "image": "https://disbit.it/assets/ilario-tornese-ritratto.jpg", "worksFor": {"@id": "https://disbit.it/#disbit"}, "sameAs": ["https://www.linkedin.com/in/ilario-tornese/"], "alumniOf": {"@type": "CollegeOrUniversity", "name": "University of Rome Tor Vergata"}, "hasCredential": [{"@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "Certified Innovation Manager (UNI 11814)", "recognizedBy": {"@type": "Organization", "name": "CEPAS (Bureau Veritas)"}}, {"@type": "EducationalOccupationalCredential", "credentialCategory": "license", "name": "Registered engineer, Order of Engineers of Rome, Section A, no. 32506", "recognizedBy": {"@type": "Organization", "name": "Ordine degli Ingegneri della Provincia di Roma"}, "identifier": {"@type": "PropertyValue", "propertyID": "Ordine degli Ingegneri della Provincia di Roma", "value": "32506"}}, {"@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "Master's degree in Industrial Engineering"}]}, {"@type": "WebPage", "@id": "https://disbit.it/en/#webpage", "url": "https://disbit.it/en/", "inLanguage": "en", "name": "DISBIT | Process Innovation &amp; Program Governance", "about": {"@id": "https://disbit.it/#disbit"}, "isPartOf": {"@id": "https://disbit.it/#website"}}]}</script>
 </head>
@@ -418,10 +531,12 @@ footer a{color:var(--hero-muted)}
       <p class="eyebrow">Process Innovation &amp; Program Governance</p>
       <h1>More efficient processes. <em>Transformations under control.</em></h1>
       <p class="intro">I help companies and service providers analyze, redesign and digitize their processes. I coordinate business, people and technology to make complex initiatives manageable and turn inefficiencies into <b>measurable results</b>.</p>
+      <p class="m-only m-intro">I analyze, redesign and digitize processes, and keep complex initiatives under control, with <b>measurable results</b>.</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="#contatti">Let’s talk →</a>
         <a class="btn btn-ghost" href="#come">How I work</a>
       </div>
+      <button class="m-share" type="button" data-share><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg><span>Send the link to your computer</span></button>
       <div class="who"><i></i><span>DISBIT was created by <b>Ilario Tornese</b>, engineer and certified Innovation Manager</span></div>
     </div>
     <div class="hero-art" aria-hidden="true"><canvas id="art"></canvas></div>
@@ -547,6 +662,7 @@ footer a{color:var(--hero-muted)}
     <p class="eyebrow">Results</p>
     <h2 class="section-title wide">Different sectors, the same method.</h2>
     <p class="sec-note">A selection of recent enterprise projects.</p>
+    <p class="m-only m-swipe">Swipe to see all 4 projects →</p>
     <ul class="crows">
       <li class="crow">
         <span class="csec">Utilities<small>Services</small></span>
@@ -614,6 +730,7 @@ footer a{color:var(--hero-muted)}
       <h2 class="section-title">INNOVAGENDA</h2>
       <p>12 principles for the strategic management of innovation, inspired by the ISO 56000 series. Not a checklist, but the management lens the DISBIT method applies to processes.</p>
     </div>
+    <p class="m-only m-swipe">Swipe to see all 12 principles →</p>
     <div class="principles">
         <button class="principle" type="button" data-i="0" data-strip="/assets/innovagenda/en/DISBIT-INNOVAGENDA-01-value-realization.jpg"><img class="pthumb" src="/assets/innovagenda/en/thumb/01.jpg" alt="" width="640" height="278" loading="lazy"><span class="n">#01</span><h3>Value realization</h3><p>Value doesn’t come from the idea, but from putting it into practice.</p><span class="more">Read more →</span></button>
         <button class="principle" type="button" data-i="1" data-strip="/assets/innovagenda/en/DISBIT-INNOVAGENDA-02-managing-uncertainty.jpg"><img class="pthumb" src="/assets/innovagenda/en/thumb/02.jpg" alt="" width="640" height="278" loading="lazy"><span class="n">#02</span><h3>Managing uncertainty</h3><p>Uncertainty isn’t something to eliminate but to manage: it is the ground where meaningful innovation grows.</p><span class="more">Read more →</span></button>
@@ -685,6 +802,8 @@ footer a{color:var(--hero-muted)}
   </div>
 </section>
 </main>
+
+<div class="m-bar" aria-hidden="true"><a href="#contatti" tabindex="-1">Let’s talk</a><button type="button" data-share tabindex="-1" aria-label="Send the link to your computer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg></button></div>
 
 <footer>
   <div class="wrap"><span class="foot-brand"><img src="/assets/disbit-logo-light.svg" alt="DISBIT" width="92" height="14"></span><span>DISBIT by Ilario Tornese · VAT IT17464071004</span><span><a href="/en/privacy.html">Privacy</a> · © 2026</span></div>
@@ -774,6 +893,33 @@ footer a{color:var(--hero-muted)}
     finally{btn.disabled=false}
   });
 })();
+</script>
+<script>
+/* versione telefono: dettagli apribili, caroselli, barra fissa, invio del link */
+(()=>{const mq=matchMedia('(max-width:767px)'),T={more:'Details',less:'Close',title:'DISBIT · Process Innovation & Program Governance',mail:'To read later on my computer: '};
+document.querySelector('.crows')?.classList.add('m-rail');
+const folds=[['.phase','p,.out'],['.area','p,ul,.chips'],['.crow','.cbody p'],['#chi-sono','.creds,.body .lead,.role-p,.story-title,.story-title ~ p']];
+folds.forEach(([h,f])=>document.querySelectorAll(h).forEach(el=>{
+ el.classList.add('m-fold-host');const fs=[...el.querySelectorAll(f)];fs.forEach(x=>x.classList.add('m-fold'));
+ const b=document.createElement('button');b.type='button';b.className='m-more';b.textContent=T.more;b.setAttribute('aria-expanded','false');
+ b.addEventListener('click',()=>{const o=el.classList.toggle('m-open');el.classList.toggle('m-open-body',o);b.setAttribute('aria-expanded',o);b.textContent=o?T.less:T.more});
+ if(h=='.crow')el.querySelector('.cbody').appendChild(b);else if(h=='#chi-sono')el.querySelector('.body').appendChild(b);else if(fs.length)fs[fs.length-1].after(b);else el.appendChild(b)}));
+const ta=document.getElementById('f-processo'),tgl=[];
+[[document.querySelector('form .scope'),'legend'],[ta&&ta.closest('label'),null]].forEach(([el,lab])=>{if(!el)return;
+ const b=document.createElement('button');b.type='button';b.className='m-ftoggle';b.setAttribute('aria-expanded','false');
+ b.textContent=(lab?el.querySelector(lab):el).firstChild.textContent.trim();
+ el.classList.add('m-fhide');el.before(b);tgl.push(el);
+ b.addEventListener('click',()=>{const open=el.classList.toggle('m-fhide')===false;b.setAttribute('aria-expanded',open);sync();if(open)(el.querySelector('textarea,input')||el).focus()})});
+const sync=()=>{if(ta)ta.required=!(mq.matches&&ta.closest('label').classList.contains('m-fhide'))};sync();mq.addEventListener('change',sync);
+const url=location.origin+location.pathname;
+document.querySelectorAll('[data-share]').forEach(b=>b.addEventListener('click',async()=>{
+ if(navigator.share){try{await navigator.share({title:T.title,url});return}catch(e){if(e.name==='AbortError')return}}
+ location.href='mailto:?subject='+encodeURIComponent(T.title)+'&body='+encodeURIComponent(T.mail+url)}));
+const bar=document.querySelector('.m-bar'),hero=document.querySelector('.hero'),cont=document.getElementById('contatti');let past=false,atForm=false;
+const upd=()=>{const on=mq.matches&&past&&!atForm;bar.classList.toggle('show',on);bar.setAttribute('aria-hidden',!on);bar.querySelectorAll('a,button').forEach(x=>x.tabIndex=on?0:-1)};
+new IntersectionObserver(e=>{past=!e[0].isIntersecting;upd()}).observe(hero);
+new IntersectionObserver(e=>{atForm=e[0].isIntersecting;upd()},{threshold:.15}).observe(cont);
+mq.addEventListener('change',upd)})();
 </script>
 </body>
 </html>
