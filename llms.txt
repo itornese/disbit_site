@@ -45,6 +45,6 @@ Serie editoriale di Ilario Tornese ispirata alla serie ISO 56000. Ogni principio
 - [#12 Integrity and social responsibility](https://disbit.it/en/innovagenda/12/)
 
 ## Optional
-- [Privacy (italiano)](https://disbit.it/privacy.html)
-- [Privacy (English)](https://disbit.it/en/privacy.html)
+- [Privacy (italiano)](https://disbit.it/privacy)
+- [Privacy (English)](https://disbit.it/en/privacy)
 - [Profilo LinkedIn di Ilario Tornese](https://www.linkedin.com/in/ilario-tornese/)
